@@ -53,3 +53,14 @@ Use a loop to read lines and add the line number to each one.
 **Solution:** See `05_numbered_lines.py`.
 
 ========================================================================================
+
+## Exercise 6: Counting Words
+**Question:**  
+Write a Python program that reads the file `my_text.txt` and counts the number of words in it, then prints the result to the console. Assume words are separated by spaces.
+
+**Hint:**  
+You can read the file line by line and use the `split()` method to separate words.
+
+**Solution:** See `06_count_words.py`.
+
+========================================================================================
