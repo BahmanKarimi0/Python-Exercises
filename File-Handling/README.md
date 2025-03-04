@@ -42,3 +42,14 @@ Read the first file and write its content to the second file. You can use `read(
 **Solution:** See `04_copy_file.py`.
 
 ========================================================================================
+
+## Exercise 5: Numbered Lines
+**Question:**  
+Write a Python program that reads the file `my_text.txt` and saves each line with its line number into a new file named `numbered_text.txt` (e.g., "1: Hello").
+
+**Hint:**  
+Use a loop to read lines and add the line number to each one.
+
+**Solution:** See `05_numbered_lines.py`.
+
+========================================================================================
