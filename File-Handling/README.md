@@ -7,7 +7,9 @@ Write a Python program that takes a text input from the user (using `input`) and
 **Hint:** Use `open()` with the `'a'` (append) mode.
 
 **Solution:** See `01_write_to_file.py`.
+
 ============================================================================================================================
+
 ## Exercise 2: Reading the Whole File
 **Question:**  
 Write a Python program that reads the entire content of the file `my_text.txt` and prints it to the console as a single string.
