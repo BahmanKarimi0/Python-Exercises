@@ -64,3 +64,14 @@ You can read the file line by line and use the `split()` method to separate word
 **Solution:** See `06_count_words.py`.
 
 ========================================================================================
+
+## Exercise 7: Replacing a Word
+**Question:**  
+Write a Python program that finds a specific word (e.g., "hello") in the file `my_text.txt` and replaces it with another word (e.g., "goodbye"), then saves the result to a new file named `new_text.txt`.
+
+**Hint:**  
+You can read the file line by line and use the `replace()` method for substitution.
+
+**Solution:** See `07_replace_word.py`.
+
+========================================================================================
