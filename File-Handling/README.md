@@ -29,3 +29,16 @@ Write a Python program that counts the number of lines in the file `my_text.txt`
 You can read the file line by line and count them, or use a method like `readlines()`.
 
 **Solution:** See `03_count_lines.py`.
+
+========================================================================================
+
+## Exercise 4: Copying a File
+**Question:**  
+Write a Python program that reads the content of the file `my_text.txt` and copies it into a new file named `copy_text.txt`.
+
+**Hint:**  
+Read the first file and write its content to the second file. You can use `read()` or process it line by line.
+
+**Solution:** See `04_copy_file.py`.
+
+========================================================================================
