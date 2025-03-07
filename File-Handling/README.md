@@ -75,3 +75,14 @@ You can read the file line by line and use the `replace()` method for substituti
 **Solution:** See `07_replace_word.py`.
 
 ========================================================================================
+
+## Exercise 8: Uppercase Starting Lines
+**Question:**  
+Write a Python program that reads the file `my_text.txt` and saves the lines that start with an uppercase letter into a new file named `upper_lines.txt`.
+
+**Hint:**  
+You can use methods like `isupper()` or check the first character of each line, and only write the lines that meet the condition.
+
+**Solution:** See `08_upper_lines.py`.
+
+========================================================================================
