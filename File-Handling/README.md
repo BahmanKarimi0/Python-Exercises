@@ -153,3 +153,13 @@ You can convert each line into a list of words and create pairs of adjacent word
 
 ===========================================================================================
 
+## Exercise 15: Longest Words
+**Question:**  
+Write a Python program that reads the file `my_text.txt` and creates a new file named `longest_words.txt`. For each line in the input file, find the longest word(s) and write them to the output file. Each line should be formatted as "Line X: word1, word2, ..." (e.g., "Line 1: hello, world"). If multiple words have the same maximum length, include all of them. If a line is empty, write "Line X: No words".
+
+**Hint:**  
+You can separate words in each line and compare their lengths. Use a list or set to store words with the maximum length. Handle punctuation and empty lines.
+
+**Solution:** See `15_longest_words.py`.
+
+=======================================================================================
