@@ -131,3 +131,13 @@ You can use a dictionary where keys are word lengths and values are sets of word
 
 ==========================================================================================
 
+## Exercise 13: Sorted Words with Line Numbers
+**Question:**  
+Write a Python program that reads the file `my_text.txt` and sorts its words alphabetically. Save the result to a new file named `sorted_words.txt`, with each line formatted as "word: line_number1, line_number2, ..." (e.g., "hello: 1, 3"), where line numbers indicate the lines in the original file where the word appears. If a word appears in multiple lines, list all line numbers separated by commas.
+
+**Hint:**  
+You can use a dictionary where keys are words and values are sets of line numbers. Handle punctuation and spaces.
+
+**Solution:** See `13_sorted_words.py`.
+
+==========================================================================================
