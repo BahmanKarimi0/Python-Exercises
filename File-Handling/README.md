@@ -119,3 +119,15 @@ You can split words with `split()` and use a dictionary to count them. Handle sp
 **Solution:** See `11_word_frequency.py`.
 
 ===========================================================================================
+
+## Exercise 12: Word Lengths
+**Question:**  
+Write a Python program that reads the file `my_text.txt` and categorizes words based on their length. Save the result to a new file named `word_lengths.txt`, with each line formatted as "length: word1, word2, ..." (e.g., "3: the, cat"). Ensure duplicate words are only listed once.
+
+**Hint:**  
+You can use a dictionary where keys are word lengths and values are sets of words with that length. Handle punctuation and spaces.
+
+**Solution:** See `12_word_lengths.py`.
+
+==========================================================================================
+
