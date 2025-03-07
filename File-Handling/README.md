@@ -98,3 +98,13 @@ You can read all lines into a list and reverse them, or use a method like `rever
 
 ========================================================================================
 
+## Exercise 10: Long Lines
+**Question:**  
+Write a Python program that reads the file `my_text.txt` and saves only the lines with more than 10 characters into a new file named `long_lines.txt`.
+
+**Hint:**  
+You can check the length of each line with `len()` and filter lines longer than 10 characters.
+
+**Solution:** See `10_long_lines.py`.
+
+========================================================================================
