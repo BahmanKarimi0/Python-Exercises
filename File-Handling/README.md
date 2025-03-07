@@ -141,3 +141,15 @@ You can use a dictionary where keys are words and values are sets of line number
 **Solution:** See `13_sorted_words.py`.
 
 ==========================================================================================
+
+## Exercise 14: Word Pairs
+**Question:**  
+Write a Python program that reads the file `my_text.txt` and creates a new file named `word_pairs.txt`. Find all adjacent word pairs in each line and count their occurrences. Each line in the output file should be formatted as "word1-word2: count" (e.g., "hello-world: 2"). Only include pairs that appear more than once.
+
+**Hint:**  
+You can convert each line into a list of words and create pairs of adjacent words. Use a dictionary to count occurrences and filter pairs with more than one occurrence.
+
+**Solution:** See `14_word_pairs.py`.
+
+===========================================================================================
+
