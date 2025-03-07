@@ -86,3 +86,15 @@ You can use methods like `isupper()` or check the first character of each line, 
 **Solution:** See `08_upper_lines.py`.
 
 ========================================================================================
+
+## Exercise 9: Reversing Lines
+**Question:**  
+Write a Python program that reads the file `my_text.txt`, reverses the order of its lines (from last to first), and saves the result into a new file named `reversed_text.txt`.
+
+**Hint:**  
+You can read all lines into a list and reverse them, or use a method like `reversed()`.
+
+**Solution:** See `09_reverse_lines.py`.
+
+========================================================================================
+
