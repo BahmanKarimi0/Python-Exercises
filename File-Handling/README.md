@@ -108,3 +108,14 @@ You can check the length of each line with `len()` and filter lines longer than 
 **Solution:** See `10_long_lines.py`.
 
 ========================================================================================
+
+## Exercise 11: Word Frequency
+**Question:**  
+Write a Python program that reads the file `my_text.txt` and creates a dictionary where the keys are unique words and the values are their frequency of occurrence. Save this dictionary to a new file named `word_count.txt`, with each line formatted as "word: count" (e.g., "hello: 3").
+
+**Hint:**  
+You can split words with `split()` and use a dictionary to count them. Handle spaces, empty lines, and punctuation (like commas and periods).
+
+**Solution:** See `11_word_frequency.py`.
+
+===========================================================================================
