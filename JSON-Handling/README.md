@@ -34,3 +34,13 @@ Use the `json` module and the `load` function to read the file. Access the "name
 
 ==========================================================================
 
+## Exercise 4: Copy JSON File
+**Question:**  
+Write a Python program that reads the file `data.json` (assume it contains a dictionary with keys "name" and "age") and creates a new file named `data_copy.json` with the same content.
+
+**Hint:**  
+Use the `json` module: `load` to read the file and `dump` to write to the new file.
+
+**Solution:** See `04_json_copy.py`.
+
+==========================================================================
