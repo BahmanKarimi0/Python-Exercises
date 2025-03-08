@@ -11,3 +11,15 @@ Use the `json` module and the `load` function to read the file. Open the file wi
 **Solution:** See `01_json_read.py`.
 
 =========================================================================
+
+## Exercise 2: Write JSON File
+**Question:**  
+Write a Python program that creates a simple dictionary with keys "name" and "city" and saves it to a file named `info.json` as JSON.
+
+**Hint:**  
+Use the `json` module and the `dump` function to write to the file. Use `with` to handle file opening and closing.
+
+**Solution:** See `02_json_write.py`.
+
+========================================================================
+
