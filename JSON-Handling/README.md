@@ -23,3 +23,14 @@ Use the `json` module and the `dump` function to write to the file. Use `with` t
 
 ========================================================================
 
+## Exercise 3: Print Name from JSON
+**Question:**  
+Write a Python program that reads the file `data.json` (assume it contains a dictionary with keys "name" and "age") and prints only the value of the "name" key to the console.
+
+**Hint:**  
+Use the `json` module and the `load` function to read the file. Access the "name" key after loading the dictionary.
+
+**Solution:** See `03_json_name.py`.
+
+==========================================================================
+
