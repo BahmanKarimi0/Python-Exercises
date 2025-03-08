@@ -44,3 +44,14 @@ Use the `json` module: `load` to read the file and `dump` to write to the new fi
 **Solution:** See `04_json_copy.py`.
 
 ==========================================================================
+
+## Exercise 5: Update Age in JSON
+**Question:**  
+Write a Python program that reads the file `data.json` (assume it contains a dictionary with keys "name" and "age"), increases the "age" value by 1, and saves the result back to `data.json`.
+
+**Hint:**  
+Use `json.load` to read the file and `json.dump` to write back. Modify the "age" value after loading the dictionary. Open the file in "w" mode to overwrite it.
+
+**Solution:** See `05_json_update_age.py`.
+
+=========================================================================
