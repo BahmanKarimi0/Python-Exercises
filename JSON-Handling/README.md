@@ -55,3 +55,17 @@ Use `json.load` to read the file and `json.dump` to write back. Modify the "age"
 **Solution:** See `05_json_update_age.py`.
 
 =========================================================================
+
+## Medium Level Exercises
+
+### Exercise 6: Calculate Average Age from JSON
+**Question:**  
+Write a Python program that reads the file `people.json` (assume it contains a list of dictionaries with keys "name" and "age") and calculates the average age of the people, then prints it to the console.
+
+**Hint:**  
+Use `json.load` to read the file. Calculate the average using a loop or `sum` and `len`.
+
+**Solution:** See `06_json_average_age.py`.
+
+=========================================================================
+
