@@ -69,3 +69,13 @@ Use `json.load` to read the file. Calculate the average using a loop or `sum` an
 
 =========================================================================
 
+### Exercise 7: Filter Adults to JSON
+**Question:**  
+Write a Python program that reads the file `people.json` (assume it contains a list of dictionaries with keys "name" and "age"), creates a new file named `adults.json`, and saves only the people who are 18 or older. The output should be a pretty-printed JSON.
+
+**Hint:**  
+Use `json.load` to read and `json.dump` to write. Filter the list to keep only adults (age >= 18). Use `indent` in `json.dump` for pretty formatting.
+
+**Solution:** See `07_json_adults.py`.
+
+=========================================================================
