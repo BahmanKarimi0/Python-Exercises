@@ -90,3 +90,14 @@ Use `json.load` to read and `json.dump` to write. Use a loop or condition to set
 **Solution:** See `08_json_add_status.py`.
 
 ========================================================================
+
+### Exercise 9: Count Adults and Minors to JSON
+**Question:**  
+Write a Python program that reads the file `people.json` (assume it contains a list of dictionaries with keys "name" and "age"), counts the number of adults (age >= 18) and minors (age < 18), and saves the result to a new file named `stats.json` as a dictionary with keys "adults" and "minors" in pretty-printed format.
+
+**Hint:**  
+Use `json.load` to read and `json.dump` to write. Count adults and minors using a loop or `filter`. Create a dictionary and save it.
+
+**Solution:** See `09_json_stats.py`.
+
+========================================================================
