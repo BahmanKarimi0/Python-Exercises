@@ -136,3 +136,15 @@ Use `json.load` to read and `json.dump` to write. Use nested loops or comprehens
 **Solution:** See `12_json_skills_map.py`.
 
 ============================================================================
+
+### Exercise 13: Assign Grades to People in JSON
+**Question:**  
+Write a Python program that reads the file `people.json` (assume it contains a list of dictionaries with keys "name", "age", and "scores" where "scores" is a list of integers), creates a new list of dictionaries with "name", "age", and a new key "grade" based on the average score (A: ≥90, B: ≥80, C: ≥70, D: ≥60, F: <60, N/A: empty scores), and saves it to `graded_people.json` in pretty-printed format.
+
+**Hint:**  
+Use `json.load` to read and `json.dump` to write. Calculate averages with `sum` and `len`, handle empty scores separately, and use conditions to assign grades.
+
+**Solution:** See `13_json_graded_people.py`.
+
+============================================================================
+
