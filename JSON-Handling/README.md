@@ -125,3 +125,14 @@ Use `json.load` to read and `json.dump` to write. Calculate averages with `sum` 
 **Solution:** See `11_json_sorted_scores.py`.
 
 ===========================================================================
+
+### Exercise 12: Map Skills to People in JSON
+**Question:**  
+Write a Python program that reads the file `people.json` (assume it contains a list of dictionaries with keys "name", "age", and "skills" where "skills" is a list of strings), creates a dictionary mapping each skill to a list of names of people who have that skill, and saves it to `skills_map.json` in pretty-printed format. Ensure names are not duplicated in the lists.
+
+**Hint:**  
+Use `json.load` to read and `json.dump` to write. Use nested loops or comprehensions to build the dictionary. Use a `set` to avoid duplicate names if needed.
+
+**Solution:** See `12_json_skills_map.py`.
+
+============================================================================
