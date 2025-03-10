@@ -101,3 +101,15 @@ Use `json.load` to read and `json.dump` to write. Count adults and minors using 
 **Solution:** See `09_json_stats.py`.
 
 ========================================================================
+
+### Exercise 10: Create Name-Age Dictionary in JSON
+**Question:**  
+Write a Python program that reads the file `people.json` (assume it contains a list of dictionaries with keys "name" and "age"), creates a new dictionary with names as keys and ages as values, and saves it to a file named `name_age.json` in pretty-printed format.
+
+**Hint:**  
+Use `json.load` to read and `json.dump` to write. Build the dictionary using a loop or dictionary comprehension.
+
+**Solution:** See `10_json_name_age.py`.
+
+=========================================================================
+
