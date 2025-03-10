@@ -79,3 +79,14 @@ Use `json.load` to read and `json.dump` to write. Filter the list to keep only a
 **Solution:** See `07_json_adults.py`.
 
 =========================================================================
+
+### Exercise 8: Add Status to JSON
+**Question:**  
+Write a Python program that reads the file `people.json` (assume it contains a list of dictionaries with keys "name" and "age"), adds a new key "status" to each dictionary with the value "adult" if age is 18 or older, or "minor" if under 18, and saves the result back to `people.json` with pretty formatting.
+
+**Hint:**  
+Use `json.load` to read and `json.dump` to write. Use a loop or condition to set the status. Overwrite the file in "w" mode.
+
+**Solution:** See `08_json_add_status.py`.
+
+========================================================================
