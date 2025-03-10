@@ -113,3 +113,15 @@ Use `json.load` to read and `json.dump` to write. Build the dictionary using a l
 
 =========================================================================
 
+## Challenging Level Exercises
+
+### Exercise 11: Sort People by Average Score in JSON
+**Question:**  
+Write a Python program that reads the file `people.json` (assume it contains a list of dictionaries with keys "name", "age", and "scores" where "scores" is a list of integers), calculates the average score for each person (rounded to 2 decimal places) and adds it as a new key "average_score", sorts the people by average score in descending order, and saves the result to `sorted_people.json` in pretty-printed format.
+
+**Hint:**  
+Use `json.load` to read and `json.dump` to write. Calculate averages with `sum` and `len`, round with `round(number, 2)`, and sort with `sort` or `sorted` using a `key`.
+
+**Solution:** See `11_json_sorted_scores.py`.
+
+===========================================================================
