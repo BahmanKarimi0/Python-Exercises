@@ -33,3 +33,13 @@ Use `csv.DictReader` to access the "grade" column. Loop through or use a conditi
 
 =======================================================================
 
+### Exercise 4: Find Students Over 20 in CSV
+**Question:**  
+Write a Python program that reads the file `students.csv` (assume it’s a CSV file with columns "name", "age", "grade"), finds the names of students whose age is over 20, and prints each name on a new line to the console. Handle errors like missing files or invalid data.
+
+**Hint:**  
+Use `csv.DictReader` to access "name" and "age". Convert "age" to a number and filter based on the condition. Check for no matches.
+
+**Solution:** See `04_csv_over_20.py`.
+
+=======================================================================
