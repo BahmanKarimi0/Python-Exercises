@@ -10,3 +10,15 @@ Use `csv.reader` or `csv.DictReader` to read the file. Loop through the rows to 
 **Solution:** See `01_csv_count_students.py`.
 
 ========================================================================
+
+### Exercise 2: Calculate Average Age in CSV
+**Question:**  
+Write a Python program that reads the file `students.csv` (assume it’s a CSV file with columns "name", "age", "grade"), calculates the average age of students, and prints it to the console with two decimal places. Handle errors like missing files or invalid data.
+
+**Hint:**  
+Use `csv.DictReader` to access the "age" column. Convert "age" to a number and compute the average. Check for empty data.
+
+**Solution:** See `02_csv_average_age.py`.
+
+========================================================================
+
