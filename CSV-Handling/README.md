@@ -22,3 +22,14 @@ Use `csv.DictReader` to access the "age" column. Convert "age" to a number and c
 
 ========================================================================
 
+### Exercise 3: Count Students with Grade A in CSV
+**Question:**  
+Write a Python program that reads the file `students.csv` (assume it’s a CSV file with columns "name", "age", "grade"), finds the number of students with grade "A", and prints the count to the console. Handle errors like missing files or invalid data.
+
+**Hint:**  
+Use `csv.DictReader` to access the "grade" column. Loop through or use a condition to count students with "A". Check for no matches.
+
+**Solution:** See `03_csv_count_grade_a.py`.
+
+=======================================================================
+
