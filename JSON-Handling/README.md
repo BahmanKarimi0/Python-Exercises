@@ -159,3 +159,13 @@ Use `json.load` to read and `json.dump` to write. Use nested loops to count ment
 
 ===========================================================================
 
+### Exercise 15: Build Family Tree in JSON
+**Question:**  
+Write a Python program that reads the file `people.json` (assume it contains a list of dictionaries with keys "name", "age", and "parent" where "parent" is a string or null/empty), creates a tree structure mapping each person to their children (those who list them as "parent"), places root individuals (no parent) at the top level, and saves it to `family_tree.json` in pretty-printed format. Include parents not in the list as roots with `age: null`.
+
+**Hint:**  
+Use `json.load` to read and `json.dump` to write. Build a dictionary of people, then link children to parents. Identify roots as those with no parent or whose parent isn’t in the list.
+
+**Solution:** See `15_json_family_tree.py`.
+
+============================================================================
