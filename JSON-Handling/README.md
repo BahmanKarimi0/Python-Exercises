@@ -148,3 +148,14 @@ Use `json.load` to read and `json.dump` to write. Calculate averages with `sum` 
 
 ============================================================================
 
+### Exercise 14: Count Friend Mentions in JSON
+**Question:**  
+Write a Python program that reads the file `people.json` (assume it contains a list of dictionaries with keys "name", "age", and "friends" where "friends" is a list of strings), creates a dictionary mapping each name to the number of times it appears in others' "friends" lists, and saves it to `friend_count.json` in pretty-printed format. Include names even if they are not in the main list.
+
+**Hint:**  
+Use `json.load` to read and `json.dump` to write. Use nested loops to count mentions in "friends" lists and a dictionary to store the counts.
+
+**Solution:** See `14_json_friend_count.py`.
+
+===========================================================================
+
