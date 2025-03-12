@@ -44,3 +44,13 @@ Use `csv.DictReader` to access "name" and "age". Convert "age" to a number and f
 
 =======================================================================
 
+### Exercise 5: Find Oldest Student in CSV
+**Question:**  
+Write a Python program that reads the file `students.csv` (assume it’s a CSV file with columns "name", "age", "grade"), finds the student with the highest age, and prints their name and age to the console. Handle errors like missing files or invalid data.
+
+**Hint:**  
+Use `csv.DictReader` to access "name" and "age". Convert "age" to a number and find the maximum using `max()` or a loop. Check for empty data.
+
+**Solution:** See `05_csv_oldest_student.py`.
+
+======================================================================
