@@ -65,3 +65,14 @@ Use `csv.DictReader` to read and `csv.DictWriter` to write. Convert "age" to a n
 **Solution:** See `06_csv_sort_by_age.py`.
 
 ======================================================================
+
+### Exercise 7: Filter Students with Grade A in CSV
+**Question:**  
+Write a Python program that reads the file `students.csv` (assume it’s a CSV file with columns "name", "age", "grade"), filters out students with grade "A", and saves their data to a new file `grade_a_students.csv`. Handle errors like missing files or invalid data.
+
+**Hint:**  
+Use `csv.DictReader` to read and `csv.DictWriter` to write. Filter students with a condition or `filter()`. Check for no matches.
+
+**Solution:** See `07_csv_grade_a.py`.
+
+========================================================================
