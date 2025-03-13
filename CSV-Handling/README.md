@@ -54,3 +54,14 @@ Use `csv.DictReader` to access "name" and "age". Convert "age" to a number and f
 **Solution:** See `05_csv_oldest_student.py`.
 
 ======================================================================
+
+### Exercise 6: Sort Students by Age in CSV
+**Question:**  
+Write a Python program that reads the file `students.csv` (assume it’s a CSV file with columns "name", "age", "grade"), sorts the students by age (ascending), and saves the sorted data to a new file `sorted_students.csv`. Handle errors like missing files or invalid data.
+
+**Hint:**  
+Use `csv.DictReader` to read and `csv.DictWriter` to write. Convert "age" to a number and sort with `sorted()`. Check for empty data.
+
+**Solution:** See `06_csv_sort_by_age.py`.
+
+======================================================================
