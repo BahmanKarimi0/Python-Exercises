@@ -88,3 +88,14 @@ Use `csv.DictReader` to read and `csv.DictWriter` to write. Count grades with a 
 
 =====================================================================
 
+### Exercise 9: Filter Teen Students in CSV
+**Question:**  
+Write a Python program that reads the file `students.csv` (assume it’s a CSV file with columns "name", "age", "grade"), finds students aged 18 to 20 (inclusive), and saves their data to a new file `teen_students.csv`. Handle errors like missing files or invalid data.
+
+**Hint:**  
+Use `csv.DictReader` to read and `csv.DictWriter` to write. Convert "age" to a number and filter with a condition or `filter()`. Check for no matches.
+
+**Solution:** See `09_csv_teen_students.py`.
+
+==================================================================
+
