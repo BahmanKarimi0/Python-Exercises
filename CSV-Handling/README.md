@@ -76,3 +76,15 @@ Use `csv.DictReader` to read and `csv.DictWriter` to write. Filter students with
 **Solution:** See `07_csv_grade_a.py`.
 
 ========================================================================
+
+### Exercise 8: Count Students by Grade in CSV
+**Question:**  
+Write a Python program that reads the file `students.csv` (assume it’s a CSV file with columns "name", "age", "grade"), counts the number of students per grade, and saves the counts to a new file `grade_counts.csv` with columns "grade" and "count". Handle errors like missing files or invalid data.
+
+**Hint:**  
+Use `csv.DictReader` to read and `csv.DictWriter` to write. Count grades with a dictionary or `collections.Counter`. Check for empty data.
+
+**Solution:** See `08_csv_grade_counts.py`.
+
+=====================================================================
+
