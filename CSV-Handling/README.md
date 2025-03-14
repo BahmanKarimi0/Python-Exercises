@@ -143,3 +143,13 @@ Use `csv.DictReader` to read and `csv.DictWriter` to write. Track the youngest p
 
 =================================================================
 
+### Exercise 14: Filter Students Above Grade Average Age in CSV
+**Question:**  
+Write a Python program that reads the file `students.csv` (assume it’s a CSV file with columns "name", "age", "grade"), finds students whose age is above the average age of their grade, and saves their data to a new file `above_grade_average.csv`. Handle errors like missing files or invalid data.
+
+**Hint:**  
+Use `csv.DictReader` to read and `csv.DictWriter` to write. Calculate average age per grade, then filter students. Check for empty data.
+
+**Solution:** See `14_csv_above_grade_average.py`.
+
+================================================================
