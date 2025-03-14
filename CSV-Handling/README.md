@@ -99,3 +99,14 @@ Use `csv.DictReader` to read and `csv.DictWriter` to write. Convert "age" to a n
 
 ==================================================================
 
+### Exercise 10: Calculate Average Age by Grade in CSV
+**Question:**  
+Write a Python program that reads the file `students.csv` (assume it’s a CSV file with columns "name", "age", "grade"), calculates the average age for each grade, and saves the results to a new file `grade_age_averages.csv` with columns "grade" and "average_age" (rounded to two decimal places). Handle errors like missing files or invalid data.
+
+**Hint:**  
+Use `csv.DictReader` to read and `csv.DictWriter` to write. Track sums and counts per grade in a dictionary and compute averages. Check for empty data.
+
+**Solution:** See `10_csv_grade_age_averages.py`.
+
+=================================================================
+
