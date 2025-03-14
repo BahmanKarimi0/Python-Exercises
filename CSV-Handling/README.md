@@ -132,3 +132,14 @@ Use `csv.DictReader` to read and `csv.DictWriter` to write. Calculate the averag
 
 =================================================================
 
+### Exercise 13: Find Youngest Student per Grade in CSV
+**Question:**  
+Write a Python program that reads the file `students.csv` (assume it’s a CSV file with columns "name", "age", "grade"), finds the youngest student for each grade, and saves their data to a new file `youngest_per_grade.csv`. Handle errors like missing files or invalid data.
+
+**Hint:**  
+Use `csv.DictReader` to read and `csv.DictWriter` to write. Track the youngest per grade in a dictionary or with a loop. Check for empty data.
+
+**Solution:** See `13_csv_youngest_per_grade.py`.
+
+=================================================================
+
