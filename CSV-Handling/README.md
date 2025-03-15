@@ -153,3 +153,14 @@ Use `csv.DictReader` to read and `csv.DictWriter` to write. Calculate average ag
 **Solution:** See `14_csv_above_grade_average.py`.
 
 ================================================================
+
+### Exercise 15: Find Students Closest to Grade Average Age in CSV
+**Question:**  
+Write a Python program that reads the file `students.csv` (assume it’s a CSV file with columns "name", "age", "grade"), finds the student closest to the average age for each grade, and saves their data to a new file `closest_to_grade_average.csv`. Handle errors like missing files or invalid data.
+
+**Hint:**  
+Use `csv.DictReader` to read and `csv.DictWriter` to write. Calculate average age per grade, then compare distances with `abs(age - average)`. Pick the first if tied.
+
+**Solution:** See `15_csv_closest_to_grade_average.py`.
+
+===============================================================
