@@ -17,3 +17,10 @@ Write a Python program that reads `sales.csv` (with columns "product", "quantity
 
 =================================================================
 
+### Exercise 2: Calculate Revenue from JSON to CSV
+**Question:**  
+Write a Python program that reads `sales.json` (a list of dictionaries with "product", "quantity", "price"), calculates the total revenue (quantity × price) per product, and saves the result to `revenue.csv` with columns "product" and "revenue". Handle errors like missing files or invalid data.
+
+**Solution:** See `2_json_to_csv_revenue.py`.
+
+=================================================================
