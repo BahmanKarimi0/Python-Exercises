@@ -24,3 +24,11 @@ Write a Python program that reads `sales.json` (a list of dictionaries with "pro
 **Solution:** See `2_json_to_csv_revenue.py`.
 
 =================================================================
+
+### Exercise 3: Calculate Discounted Prices from CSV and JSON
+**Question:**  
+Write a Python program that reads `sales.csv` (with columns "product", "quantity", "price") and `discounts.json` (a dictionary of product names and discount percentages), calculates the discounted price (price × (1 - discount)) for products present in both files, and saves the result to `discounted_prices.csv` with columns "product" and "discounted_price". Handle errors like missing files or invalid data.
+
+**Solution:** See `3_combined_discounts.py`.
+
+=================================================================
