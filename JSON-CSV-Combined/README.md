@@ -32,3 +32,11 @@ Write a Python program that reads `sales.csv` (with columns "product", "quantity
 **Solution:** See `3_combined_discounts.py`.
 
 =================================================================
+
+### Exercise 4: Calculate Remaining Stock from CSV and JSON
+**Question:**  
+Write a Python program that reads `inventory.csv` (with columns "product", "stock") and `sales.json` (a list of dictionaries with "product", "quantity", "price"), calculates the remaining stock (stock - total quantity) for products present in both files, and saves the result to `remaining_stock.json` as a dictionary. Handle errors like missing files or invalid data.
+
+**Solution:** See `4_combined_stock.py`.
+
+==================================================================
