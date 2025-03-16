@@ -40,3 +40,12 @@ Write a Python program that reads `inventory.csv` (with columns "product", "stoc
 **Solution:** See `4_combined_stock.py`.
 
 ==================================================================
+
+### Exercise 5: Calculate Customer Order Totals from CSV and JSON
+**Question:**  
+Write a Python program that reads `customers.csv` (with columns "customer_id", "name") and `orders.json` (a list of dictionaries with "order_id", "customer_id", "amount"), calculates the total order amount per customer for those present in both files, and saves the result to `customer_totals.csv` with columns "customer_id", "name", and "total_amount". Handle errors like missing files or invalid data.
+
+**Solution:** See `5_combined_customer_totals.py`.
+
+================================================================
+
