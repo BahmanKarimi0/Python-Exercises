@@ -49,3 +49,11 @@ Write a Python program that reads `customers.csv` (with columns "customer_id", "
 
 ================================================================
 
+### Exercise 6: Calculate March 2025 Revenue from CSV and JSON
+**Question:**  
+Write a Python program that reads `products.csv` (with columns "product_id", "name", "price") and `sales.json` (a list of dictionaries with "sale_id", "product_id", "quantity", "date"), calculates the total revenue (price × quantity) per product for sales in March 2025 only, and saves the result to `march_revenue.json` as a dictionary for products present in both files. Handle errors like missing files or invalid data.
+
+**Solution:** See `6_march_revenue.py`.
+
+===============================================================
+
