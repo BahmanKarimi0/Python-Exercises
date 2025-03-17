@@ -57,3 +57,10 @@ Write a Python program that reads `products.csv` (with columns "product_id", "na
 
 ===============================================================
 
+### Exercise 7: Calculate Completed Task Hours from CSV and JSON
+**Question:**  
+Write a Python program that reads `employees.csv` (with columns "employee_id", "name", "department") and `tasks.json` (a list of dictionaries with "task_id", "employee_id", "hours", "status"), calculates the total hours per employee for tasks with "completed" status, and saves the result to `completed_hours.csv` with columns "employee_id", "name", "department", and "total_hours" for employees present in both files. Set total_hours to 0 for employees with no completed tasks. Handle errors like missing files or invalid data.
+
+**Solution:** See `7_completed_hours.py`.
+
+==============================================================
