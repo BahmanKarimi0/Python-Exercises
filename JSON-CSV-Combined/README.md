@@ -81,3 +81,11 @@ Write a Python program that reads `suppliers.csv` (with columns "supplier_id", "
 
 ============================================================
 
+### Exercise 10: Calculate Customer Spending in 2025 from CSV and JSON
+**Question:**  
+Write a Python program that reads `customers.csv` (with columns "customer_id", "name", "city") and `purchases.json` (a list of dictionaries with "purchase_id", "customer_id", "product", "amount", "date"), calculates the total spending (amount) per customer for purchases in 2025 only, and saves the result to `customer_spending_2025.csv` with columns "customer_id", "name", "city", and "total_spending" for customers present in both files. Set total_spending to 0 for customers with no 2025 purchases. Handle errors like missing files or invalid data.
+
+**Solution:** See `10_customer_spending_2025.py`.
+
+===========================================================
+
