@@ -72,3 +72,12 @@ Write a Python program that reads `stores.csv` (with columns "store_id", "locati
 **Solution:** See `8_store_inventory.py`.
 
 ============================================================
+
+### Exercise 9: Calculate Supplier Costs from CSV and JSON
+**Question:**  
+Write a Python program that reads `suppliers.csv` (with columns "supplier_id", "name", "region") and `orders.json` (a list of dictionaries with "order_id", "supplier_id", "product", "quantity", "price"), calculates the total cost (quantity × price) per supplier, and saves the result to `supplier_costs.csv` with columns "supplier_id", "name", "region", and "total_cost" for suppliers present in both files. Handle errors like missing files or invalid data.
+
+**Solution:** See `9_supplier_costs.py`.
+
+============================================================
+
