@@ -64,3 +64,11 @@ Write a Python program that reads `employees.csv` (with columns "employee_id", "
 **Solution:** See `7_completed_hours.py`.
 
 ==============================================================
+
+### Exercise 8: Calculate Store Inventory Totals from CSV and JSON
+**Question:**  
+Write a Python program that reads `stores.csv` (with columns "store_id", "location") and `inventory.json` (a list of dictionaries with "inventory_id", "store_id", "product", "quantity"), calculates the total quantity per product per store, and saves the result to `store_inventory.csv` with columns "store_id", "location", "product", and "total_quantity" for stores present in both files. Aggregate quantities if a product appears multiple times in a store. Handle errors like missing files or invalid data.
+
+**Solution:** See `8_store_inventory.py`.
+
+============================================================
