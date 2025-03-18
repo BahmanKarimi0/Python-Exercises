@@ -89,3 +89,11 @@ Write a Python program that reads `customers.csv` (with columns "customer_id", "
 
 ===========================================================
 
+### Exercise 11: Project Expense Summary from CSV and JSON
+**Question:**  
+Write a Python program that reads `projects.csv` (with columns "project_id", "name", "budget") and `expenses.json` (a list of dictionaries with "expense_id", "project_id", "category", "amount", "date"), calculates total expenses per category per project and their percentage of the budget, and saves the result to `project_expense_summary.csv` with columns "project_id", "name", "budget", "category", "total_amount", and "percentage" for projects present in both files. Include all categories with 0 for projects with no expenses. Handle errors.
+
+**Solution:** See `11_project_expense_summary.py`.
+
+==========================================================
+
