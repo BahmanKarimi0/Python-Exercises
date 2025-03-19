@@ -97,3 +97,11 @@ Write a Python program that reads `projects.csv` (with columns "project_id", "na
 
 ==========================================================
 
+### Exercise 12: Employee Work Summary from CSV and JSON
+**Question:**  
+Write a Python program that reads `employees.csv` (with columns "employee_id", "name", "department") and `timesheets.json` (a list of dictionaries with "timesheet_id", "employee_id", "date", "hours_worked"), calculates total hours worked per month and monthly average for each employee in 2025, and saves the result to `employee_work_summary.csv` with columns "employee_id", "name", "department", "month", "total_hours", and "monthly_average" for employees present in both files. Set total_hours to 0 for months with no work, excluding them from the average. Handle errors.
+
+**Solution:** See `12_employee_work_summary.py`.
+
+=========================================================
+
