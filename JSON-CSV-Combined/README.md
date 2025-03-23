@@ -113,3 +113,12 @@ Write a Python program that reads `inventory.csv` (with columns "item_id", "name
 
 ========================================================
 
+### Exercise 14: Customer Orders and Region Summary from CSV and JSON
+**Question:**  
+Write a Python program that reads `customers.csv` (columns: "customer_id", "name", "region") and `orders.json` (list of dictionaries with "order_id", "customer_id", "date", "items" [list of {"item_id", "quantity", "price"}]), calculates total cost per customer per month in 2025, identifies VIP customers (orders in ≥3 months and total cost > 5000), computes average monthly cost and VIP count per region, and saves results to `customer_orders.csv` ("customer_id", "name", "region", "month", "total_cost", "is_vip") and `region_summary.csv` ("region", "avg_monthly_cost", "vip_count"). Ignore non-2025 orders. Handle errors.
+
+**Solution:** See `14_customer_orders.py`.  
+**Data:** See `customers.csv` (45 customers) and `orders.json` (75 orders).
+
+=======================================================
+
