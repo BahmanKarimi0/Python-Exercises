@@ -122,3 +122,11 @@ Write a Python program that reads `customers.csv` (columns: "customer_id", "name
 
 =======================================================
 
+### Exercise 15: Product Sales and Category Summary from CSV and JSON
+**Question:**  
+Write a Python program that reads `products.csv` ("product_id", "name", "category") and `sales.json` (list of {"sale_id", "product_id", "quantity", "price", "region"}), calculates total sales per product per region, identifies best sellers (sales in >=3 regions and total > 10000), computes average regional sales and best seller count per category, and saves results to `product_sales.csv` ("product_id", "name", "category", "region", "total_sales", "is_best_seller") and `category_summary.csv` ("category", "avg_regional_sales", "best_seller_count"). Handle errors.
+
+**Solution:** See `15_product_sales.py`.  
+**Data:** See `products.csv` (45 products) and `sales.json` (75 sales).
+
+======================================================
