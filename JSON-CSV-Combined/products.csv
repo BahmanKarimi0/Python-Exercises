@@ -1,0 +1,46 @@
+product_id,name,category
+1,Laptop,Electronics
+2,Mouse,Accessories
+3,Desk,Furniture
+4,Chair,Furniture
+5,Phone,Electronics
+6,Keyboard,Accessories
+7,Monitor,Electronics
+8,Table,Furniture
+9,Headphones,Accessories
+10,TV,Electronics
+11,Lamp,Furniture
+12,Speaker,Accessories
+13,Tablet,Electronics
+14,Sofa,Furniture
+15,Charger,Accessories
+16,Printer,Electronics
+17,Bookshelf,Furniture
+18,Webcam,Accessories
+19,Smartwatch,Electronics
+20,Bed,Furniture
+21,Mousepad,Accessories
+22,Router,Electronics
+23,Cabinet,Furniture
+24,Earphones,Accessories
+25,Projector,Electronics
+26,Dresser,Furniture
+27,USB Hub,Accessories
+28,Smartphone,Electronics
+29,Couch,Furniture
+30,Adapter,Accessories
+31,LCD Monitor,Electronics
+32,Office Chair,Furniture
+33,Wireless Mouse,Accessories
+34,Gaming Console,Electronics
+35,Dining Table,Furniture
+36,Bluetooth Speaker,Accessories
+37,Smart TV,Electronics
+38,Bookshelf Speaker,Furniture
+39,Power Bank,Accessories
+40,Desktop PC,Electronics
+41,Coffee Table,Furniture
+42,USB Cable,Accessories
+43,LED Monitor,Electronics
+44,Wardrobe,Furniture
+45,HDMI Cable,Accessories
