@@ -105,3 +105,11 @@ Write a Python program that reads `employees.csv` (with columns "employee_id", "
 
 =========================================================
 
+### Exercise 13: Inventory Summary from CSV and JSON
+**Question:**  
+Write a Python program that reads `inventory.csv` (with columns "item_id", "name", "category", "stock") and `transactions.json` (a list of dictionaries with "transaction_id", "item_id", "type" ["sale" or "restock"], "quantity", "date"), updates current stock based on transactions (subtract sales, add restocks), calculates total sold and restocked per item in 2025, and saves the result to `inventory_summary.csv` with columns "item_id", "name", "category", "initial_stock", "current_stock", "total_sold", "total_restocked" for items present in both files. Ignore transactions outside 2025. Handle errors.
+
+**Solution:** See `13_inventory_summary.py`.
+
+========================================================
+
