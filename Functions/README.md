@@ -56,3 +56,13 @@ Write a function `find_max(numbers)` that takes a list of numbers and returns th
 Write a function `reverse_words(sentence)` that takes a sentence and returns it with the words in reverse order, while keeping the letters in each word unchanged, without using `[::-1]` for reversing the word list. Assume words are separated by single spaces with no extra spaces.
 
 **Solution:** See `07_reverse_words.py`.
+
+---
+
+### Exercise 08: Count Duplicates in List (Medium)
+**Question:**  
+Write a function `count_duplicates(words)` that takes a list of strings and returns a dictionary with the count of each word, treating uppercase and lowercase letters the same.
+
+**Solution:** See `08_count_duplicates.py`.
+
+---
