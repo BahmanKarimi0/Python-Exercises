@@ -51,3 +51,11 @@ Write a function `find_max(numbers)` that takes a list of numbers and returns th
 
 ===========================================
 
+### Exercise 07: Reverse Words in Sentence (Medium)
+**Question:**  
+Write a function `reverse_words(sentence)` that takes a sentence and returns it with the words in reverse order, while keeping the letters in each word unchanged. Assume words are separated by single spaces with no extra spaces.
+
+**Solution:** See `07_reverse_words.py`.
+
+=============================================
+
