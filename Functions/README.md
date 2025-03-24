@@ -35,3 +35,11 @@ Write a function `sum_of_digits(n)` that takes a positive integer `n` and return
 
 ==========================================
 
+### Exercise 05: Count Vowels (Simple)
+**Question:**  
+Write a function `count_vowels(s)` that takes a string `s` and returns the number of vowels (a, e, i, o, u), treating uppercase and lowercase letters the same.
+
+**Solution:** See `05_count_vowels.py`.
+
+===========================================
+
