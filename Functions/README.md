@@ -19,3 +19,10 @@ Write a function `is_prime(n)` that takes a positive integer `n` (>1) and return
 
 ============================================
 
+### Exercise 03: Reverse String (Simple)
+**Question:**  
+Write a function `reverse_string(s)` that takes a string `s` and returns its reverse, using only loops or simple operations (no `[::-1]` or `reversed`).
+
+**Solution:** See `03_reverse_string.py`.
+
+=============================================
