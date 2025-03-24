@@ -11,3 +11,11 @@ Write a function `power(base, exp)` that calculates `base` raised to the power o
 
 ===========================================
 
+### Exercise 02: Prime Number Check (Simple)
+**Question:**  
+Write a function `is_prime(n)` that takes a positive integer `n` (>1) and returns `True` if it’s a prime number, and `False` otherwise.
+
+**Solution:** See `02_is_prime.py`.
+
+============================================
+
