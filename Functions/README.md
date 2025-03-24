@@ -26,3 +26,12 @@ Write a function `reverse_string(s)` that takes a string `s` and returns its rev
 **Solution:** See `03_reverse_string.py`.
 
 =============================================
+
+### Exercise 04: Sum of Digits (Simple)
+**Question:**  
+Write a function `sum_of_digits(n)` that takes a positive integer `n` and returns the sum of its digits. You can use string conversion.
+
+**Solution:** See `04_sum_of_digits.py`.
+
+==========================================
+
