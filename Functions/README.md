@@ -66,3 +66,11 @@ Write a function `count_duplicates(words)` that takes a list of strings and retu
 **Solution:** See `08_count_duplicates.py`.
 
 ---
+
+### Exercise 09: Filter Even Numbers (Medium)
+**Question:**  
+Write a function `filter_even_numbers(numbers)` that takes a list of integers and returns a new list containing only the even numbers, without using the `filter()` function. Return an empty list if no even numbers are found.
+
+**Solution:** See `09_filter_even_numbers.py`.
+
+---
