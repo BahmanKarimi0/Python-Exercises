@@ -7,9 +7,9 @@ This section is dedicated to exploring and practicing Python functions through a
 **Question:**  
 Write a function `power(base, exp)` that calculates `base` raised to the power of `exp` using only multiplication (no `**` or `pow`). Assume `exp` is a non-negative integer.
 
-**Solution:** See `01_simple.py`.
+**Solution:** See `01_power.py`.
 
-===========================================
+---
 
 ### Exercise 02: Prime Number Check (Simple)
 **Question:**  
@@ -17,7 +17,7 @@ Write a function `is_prime(n)` that takes a positive integer `n` (>1) and return
 
 **Solution:** See `02_is_prime.py`.
 
-============================================
+---
 
 ### Exercise 03: Reverse String (Simple)
 **Question:**  
@@ -25,7 +25,7 @@ Write a function `reverse_string(s)` that takes a string `s` and returns its rev
 
 **Solution:** See `03_reverse_string.py`.
 
-=============================================
+---
 
 ### Exercise 04: Sum of Digits (Simple)
 **Question:**  
@@ -33,7 +33,7 @@ Write a function `sum_of_digits(n)` that takes a positive integer `n` and return
 
 **Solution:** See `04_sum_of_digits.py`.
 
-==========================================
+---
 
 ### Exercise 05: Count Vowels (Simple)
 **Question:**  
@@ -41,21 +41,18 @@ Write a function `count_vowels(s)` that takes a string `s` and returns the numbe
 
 **Solution:** See `05_count_vowels.py`.
 
-===========================================
+---
 
 ### Exercise 06: Find Maximum in List (Medium)
 **Question:**  
-Write a function `find_max(numbers)` that takes a list of numbers and returns the largest number in it. Assume the list is non-empty and contains only numbers.
+Write a function `find_max(numbers)` that takes a list of numbers and returns the largest number in it, without using the `max()` function. Assume the list is non-empty and contains only numbers.
 
 **Solution:** See `06_find_max.py`.
 
-===========================================
+---
 
 ### Exercise 07: Reverse Words in Sentence (Medium)
 **Question:**  
-Write a function `reverse_words(sentence)` that takes a sentence and returns it with the words in reverse order, while keeping the letters in each word unchanged. Assume words are separated by single spaces with no extra spaces.
+Write a function `reverse_words(sentence)` that takes a sentence and returns it with the words in reverse order, while keeping the letters in each word unchanged, without using `[::-1]` for reversing the word list. Assume words are separated by single spaces with no extra spaces.
 
 **Solution:** See `07_reverse_words.py`.
-
-=============================================
-
