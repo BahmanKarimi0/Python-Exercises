@@ -43,3 +43,11 @@ Write a function `count_vowels(s)` that takes a string `s` and returns the numbe
 
 ===========================================
 
+### Exercise 06: Find Maximum in List (Medium)
+**Question:**  
+Write a function `find_max(numbers)` that takes a list of numbers and returns the largest number in it. Assume the list is non-empty and contains only numbers.
+
+**Solution:** See `06_find_max.py`.
+
+===========================================
+
