@@ -74,3 +74,12 @@ Write a function `filter_even_numbers(numbers)` that takes a list of integers an
 **Solution:** See `09_filter_even_numbers.py`.
 
 ---
+
+### Exercise 10: Sum Subsets (Medium)
+**Question:**  
+Write a function `sum_subsets(numbers, target)` that takes a list of numbers and a target number, and returns `True` if a subset of the numbers can sum to the target, and `False` otherwise.
+
+**Solution:** See `10_sum_subsets.py`.
+
+---
+
