@@ -83,3 +83,16 @@ Write a function `sum_subsets(numbers, target)` that takes a list of numbers and
 
 ---
 
+### Exercise 11: Limited Factorial (Hard)
+**Question:**  
+Write a function `limited_factorial(n, limit)` that calculates the factorial of `n`, but if the result exceeds a specified `limit`, it returns the `limit` instead. Assume `n` is a non-negative integer and `limit` is a positive integer. Use a loop and do not use recursion or built-in functions like `math.factorial`.
+
+**Examples:**  
+- `limited_factorial(5, 50)` → `50` (since 5! = 120 and 120 > 50, return 50)  
+- `limited_factorial(5, 10)` → `10` (since 5! = 120 and 120 > 10, return 10)  
+- `limited_factorial(4, 25)` → `24` (since 4! = 24 and 24 > 25 is false, return 24)
+
+**Solution:** See `11_limited_factorial.py`.
+
+---
+
