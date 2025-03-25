@@ -96,3 +96,17 @@ Write a function `limited_factorial(n, limit)` that calculates the factorial of 
 
 ---
 
+### Exercise 12: Greatest Common Divisor of Strings (Hard)
+**Question:**  
+Write a function `gcd_strings(s1, s2)` that takes two strings `s1` and `s2` and returns the largest string that divides both `s1` and `s2` completely (i.e., both strings can be formed by repeating that string an integer number of times). If no such string exists, return an empty string `""`. Assume the inputs are non-empty strings containing only English letters. Do not use built-in functions like `math.gcd`.
+
+**Examples:**  
+- `gcd_strings("ABCABC", "ABC")` → `"ABC"`  
+- `gcd_strings("ABABAB", "ABAB")` → `"AB"`  
+- `gcd_strings("LEET", "CODE")` → `""`  
+- `gcd_strings("AB", "ABABABABAB")` → `"AB"`
+
+**Solution:** See `12_gcd_strings.py`.
+
+---
+
