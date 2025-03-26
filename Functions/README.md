@@ -129,3 +129,22 @@ Write a function `most_frequent_words(text, k)` that takes a string `text` and a
 
 ---
 
+### Exercise 14: Moving Average (Hard)
+**Question:**  
+Write a function `moving_average(numbers, window)` that takes a list of numbers `numbers` and an integer `window`, and returns the moving average of the list with the specified window size. The moving average is computed as the average of `window` consecutive elements starting at each position. The output should be a list of averages, rounded to 2 decimal places. Ignore positions where the window exceeds the remaining elements.
+
+**Examples:**  
+- `moving_average([1, 2, 3, 4, 5], 3)` → `[2.00, 3.00, 4.00]`  
+- `moving_average([1.5, 2.5, 3.5], 2)` → `[2.00, 3.00]`  
+- `moving_average([1, 2], 1)` → `[1.00, 2.00]`  
+- `moving_average([10, 20, 30], 4)` → `[]`
+
+**Constraints:**  
+- `1 <= len(numbers) <= 1000`
+- `1 <= window <= len(numbers)`
+- Numbers can be integers or floats.
+
+**File:** `14_moving_average.py`
+
+---
+
