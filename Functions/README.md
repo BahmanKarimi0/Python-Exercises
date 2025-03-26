@@ -110,3 +110,22 @@ Write a function `gcd_strings(s1, s2)` that takes two strings `s1` and `s2` and 
 
 ---
 
+### Exercise 13: Most Frequent Words in Text (Hard)
+**Question:**  
+Write a function `most_frequent_words(text, k)` that takes a string `text` and an integer `k`, and returns a list of the `k` most frequent words in the text. Words are separated by spaces, and the text contains only lowercase English letters and spaces. The output should be sorted by frequency in descending order. If there are fewer unique words than `k`, return all unique words.
+
+**Examples:**  
+- `most_frequent_words("the cat and the dog and the mouse", 2)` → `["the", "and"]`  
+- `most_frequent_words("data data science is cool", 3)` → `["data", "science", "is"]`  
+- `most_frequent_words("hello", 1)` → `["hello"]`  
+- `most_frequent_words("a a a b b c", 2)` → `["a", "b"]`
+
+**Constraints:**  
+- `1 <= len(text) <= 1000`
+- `1 <= k <= number of unique words`
+- Text contains only lowercase English letters and spaces.
+
+**File:** `13_most_frequent_words.py`
+
+---
+
