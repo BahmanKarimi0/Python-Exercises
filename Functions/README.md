@@ -148,3 +148,22 @@ Write a function `moving_average(numbers, window)` that takes a list of numbers 
 
 ---
 
+### Exercise 15: Find Repeated Patterns (Hard)
+**Question:**  
+Write a function `find_repeated_patterns(numbers, k)` that takes a list of numbers `numbers` and an integer `k`, and returns a list of all contiguous patterns of length `k` that appear at least twice in the list. Each pattern is itself a list of numbers. The order of patterns in the output doesn't matter.
+
+**Examples:**  
+- `find_repeated_patterns([1, 2, 3, 1, 2, 3, 4], 3)` → `[[1, 2, 3]]`  
+- `find_repeated_patterns([1.5, 2.5, 1.5, 2.5, 3.5], 2)` → `[[1.5, 2.5]]`  
+- `find_repeated_patterns([1, 2, 1, 2, 1, 2], 2)` → `[[1, 2]]`  
+- `find_repeated_patterns([1, 2, 3, 4], 2)` → `[]`
+
+**Constraints:**  
+- `1 <= len(numbers) <= 1000`
+- `1 <= k <= len(numbers)`
+- Numbers can be integers or floats.
+
+**File:** `15_find_repeated_patterns.py`
+
+---
+
