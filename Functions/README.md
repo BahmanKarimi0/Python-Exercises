@@ -234,3 +234,22 @@ Server1 crashed with data`
 
 ---
 
+### Exercise 19: Summarize Data from CSV (Challenging)
+**Question:**  
+Write a function `summarize_csv(filename, column_name)` that reads a CSV file, sums the numeric values in the specified column, and returns a dictionary with `"sum"` (int if whole, else float) and `"count"`. Ignore non-numeric values. Return `{"ERROR": "message"}` on error.
+
+**Examples:**  
+- File `sales.csv`:
+- `product,price,quantity
+phone,299.99,5
+laptop,999.5,2
+cable,10,3
+headset,25.75,invalid`
+
+- `summarize_csv("sales.csv", "quantity")` returns `{"sum": 10, "count": 3}`  
+- `summarize_csv("sales.csv", "price")` returns `{"sum": 1335.24, "count": 4}`  
+Constraints: File has at most 1000 rows, each row has at most 1000 characters.  
+
+**File:** `19_summarize_csv.py`
+
+---
