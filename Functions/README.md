@@ -186,3 +186,28 @@ Write a function `count_words(filename)` that takes a filename (string), reads a
 - Words contain only letters and numbers after cleaning.
 
 **File:** `16_count_words.py`
+
+---
+
+### Exercise 17: Filter Data from File (Challenging)
+**Question:**  
+Write a function `filter_data(filename, keyword)` that takes a filename and a keyword, reads a text file, and returns a list of lines containing the keyword (case-insensitive). Return lines unchanged. If an error occurs, return a dictionary with an "ERROR" key and the error message.
+
+**Examples:**  
+- File `data.txt`:
+- `Temperature: 25C`
+- `Humidity: 60%`
+- `Temperature: 30C`
+- `Pressure: 1013hPa`
+
+- `filter_data("data.txt", "temperature")` → `["Temperature: 25C\n", "Temperature: 30C\n"]`  
+- `filter_data("notfound.txt", "test")` → `{"ERROR": "File not found"}`
+
+**Constraints:**  
+- File has at most 1000 lines.
+- Each line has at most 1000 characters.
+
+**File:** `17_filter_data.py`
+
+---
+
