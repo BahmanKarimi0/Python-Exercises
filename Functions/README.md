@@ -167,3 +167,22 @@ Write a function `find_repeated_patterns(numbers, k)` that takes a list of numbe
 
 ---
 
+### Exercise 16: Count Words from File (Challenging)
+**Question:**  
+Write a function `count_words(filename)` that takes a filename (string), reads a text file, and returns a dictionary with words as keys and their counts as values. Convert all words to lowercase, ignore non-alphanumeric characters, and return a dictionary with an "error" key containing the error message if the file cannot be read.
+
+**Examples:**  
+- File `sample.txt`:
+- `Hello world`
+- `Hello Python hello`
+- `World123`
+
+→ `{"hello": 3, "world": 2, "python": 1, "world123": 1}`  
+- File not found → `{"error": "File not found"}`
+
+**Constraints:**  
+- File has at most 1000 lines.
+- Each line has at most 1000 characters.
+- Words contain only letters and numbers after cleaning.
+
+**File:** `16_count_words.py`
