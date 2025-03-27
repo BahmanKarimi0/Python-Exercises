@@ -211,3 +211,26 @@ Write a function `filter_data(filename, keyword)` that takes a filename and a ke
 
 ---
 
+### Exercise 18: Analyze Keywords in File (Challenging)
+**Question:**  
+Write a function `analyze_keywords(filename, min_length, min_count)` that reads a text file and returns a dictionary of words (lowercase) with length >= `min_length` and count >= `min_count`. Ignore non-alphanumeric characters. Exclude words that are substrings of other qualifying words. Return `{"ERROR": "message"}` on error.
+
+**Examples:**  
+- File `log.txt`:
+`Database error on server1
+Data input failed
+Database connection lost
+Server1 crashed with data`
+
+- `analyze_keywords("log.txt", 4, 2)` → `{"database": 2, "server1": 2}`  
+- `analyze_keywords("notfound.txt", 3, 1)` → `{"ERROR": "File not found"}`
+
+**Constraints:**  
+- File has at most 1000 lines.
+- Each line has at most 1000 characters.
+- `min_length` and `min_count` are positive.
+
+**File:** `18_analyze_keywords.py`
+
+---
+
