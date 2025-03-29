@@ -19,7 +19,21 @@ Write a decorator named `log_call` that:
 **Sample Input:**
 ```python
 add_numbers(3, 5)
-add_numbers(10, 20)```
+add_numbers(10, 20)
+```
+
+**Sample Output:**
+
+-in the terminal:
+```
+8
+30
+```
+-In "function_logs.txt":
+```
+Function add_numbers called with args: (3, 5)
+Function add_numbers called with args: (10, 20)
+```
 
 ---
 
