@@ -19,7 +19,7 @@ Write a decorator named `log_call` that:
 **Sample Input:**
 ```python
 add_numbers(3, 5)
-add_numbers(10, 20)
+add_numbers(10, 20)```
 
 ---
 
