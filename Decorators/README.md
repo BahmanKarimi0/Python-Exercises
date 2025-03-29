@@ -1,8 +1,11 @@
 # Decorators Exercises
-# This directory contains a series of exercises to explore Python decorators.
-# We will cover 15 exercises: 5 simple, 5 intermediate, and 5 advanced.
-# Each exercise builds on previous topics like file handling, CSV/JSON processing,
-# and function manipulation, while introducing decorator concepts to enhance functionality.
+This directory contains a series of exercises to explore Python decorators.
+We will cover 15 exercises: 5 simple, 5 intermediate, and 5 advanced.
+Each exercise builds on previous topics like file handling, CSV/JSON processing,
+and function manipulation, while introducing decorator concepts to enhance functionality.
+
+---
+
 
 ### Exercise 1: Log Call Decorator (Simple)
 
