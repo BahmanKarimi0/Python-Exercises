@@ -253,3 +253,37 @@ Constraints: File has at most 1000 rows, each row has at most 1000 characters.
 **File:** `19_summarize_csv.py`
 
 ---
+
+### Exercise 20: Calculate Region Product Profit (Comprehensive Analysis)
+
+Write a function named `calculate_region_product_profit` that:
+1. Reads a CSV file named "products.csv" with columns "product_id", "name", "category", and "unit_cost".
+2. Reads a JSON file named "orders.json" containing a list of orders with fields "customer_id", "product_id", "amount", and "region".
+3. Calculates the profit for each order (amount minus unit cost of the product).
+4. Aggregates the profit by region and product, including all possible region-product combinations (with zero profit where no sales occurred for comprehensive analysis).
+5. Writes the result to a CSV file named "region_product_profit.csv" with columns "region", "product_id", "name", and "total_profit".
+
+**Sample Input:**
+- **products.csv**:
+``` product_id,name,category,unit_cost
+1,Laptop,Electronics,500
+2,Book,Stationery,10
+3,Smartphone,Electronics,300
+4,Notebook,Stationery,5
+5,Headphones,Electronics,50
+6,Pen,Stationery,2
+7,Tablet,Electronics,400
+8,Mouse,Electronics,20
+9,Keyboard,Electronics,30
+10,Desk Chair,Furniture,80
+
+- **orders.json**:
+```json
+[
+    {"customer_id": "C1", "product_id": "1", "amount": "600", "region": "North"},
+    {"customer_id": "C2", "product_id": "2", "amount": "15", "region": "South"},
+    {"customer_id": "C3", "product_id": "3", "amount": "350", "region": "East"},
+    ...
+]
+
+**File:** `20_region_product_prifit.py`
