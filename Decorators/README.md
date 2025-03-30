@@ -67,3 +67,37 @@ Hello Reza!
 Function say_hello has been called 3 times
 ```
 
+---
+
+---
+
+### Exercise 3: Time Execution Decorator (Simple)
+
+Write a decorator named `time_execution` that:  
+1. Measures the execution time of the function (in seconds) and writes it to a text file named "execution_times.txt".  
+2. Executes the original function without modification.  
+3. Use this decorator on a function named `slow_sum` that takes two numbers, includes a 1-second artificial delay (using `time.sleep`), and returns their sum.
+
+**File Name**: `03_time_execution_decorator.py`
+
+**Sample Input**:  
+```python
+slow_sum(5, 10)
+slow_sum(3, 7)
+```
+
+**Sample Input**:  
+
+- in the terminal
+```
+15
+10
+```
+
+- In "execution_times.txt":
+```
+Function slow_sum took approximately 1.0 seconds
+Function slow_sum took approximately 1.0 seconds
+```
+
+---
