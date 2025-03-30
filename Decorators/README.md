@@ -86,7 +86,7 @@ slow_sum(5, 10)
 slow_sum(3, 7)
 ```
 
-**Sample Input**:  
+**Sample Output**:  
 
 - in the terminal
 ```
@@ -101,3 +101,38 @@ Function slow_sum took approximately 1.0 seconds
 ```
 
 ---
+
+---
+
+### Exercise 4: Cache Result Decorator (Simple)
+
+Write a decorator named `cache_result` that:  
+1. Stores the function's result in a text file named "function_cache.txt" (in the format "inputs:output").  
+2. Returns the cached result if the function is called again with the same inputs, without re-executing the function.  
+3. Use this decorator on a function named `multiply` that takes two numbers and returns their product.
+
+**Note**: The "function_cache.txt" file should only store unique input-output pairs.
+
+**File Name**: `04_cache_result_decorator.py`
+
+**Sample Input**:  
+```python
+multiply(2, 3)
+multiply(4, 5)
+multiply(2, 3)
+```
+**Sample Output**: 
+- in the terminal:
+```
+6
+20
+6
+```
+- In "function_cache.txt":
+```
+(2, 3):6
+(4, 5):20
+```
+
+---
+
