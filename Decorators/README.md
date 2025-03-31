@@ -136,3 +136,32 @@ multiply(2, 3)
 
 ---
 
+---
+
+### Exercise 5: Log Args Decorator (Simple)
+
+Write a decorator named `log_args` that:  
+1. Stores the function's arguments in a CSV file named "args_log.csv" (columns: "Function Name", "Arguments").  
+2. Executes the original function without modification.  
+3. Use this decorator on a function named `greet` that takes a name and a message and prints a greeting.
+
+**File Name**: `05_log_args_decorator.py`
+
+**Sample Input**:  
+```python
+greet("Ali", "Good morning")
+greet("Sara", "Hello there")
+```
+**Sample Output**: 
+
+- in the terminal:
+```
+Hello Ali, Good morning!
+Hello Sara, Hello there!
+```
+- in "args_log.txt":
+```
+Function Name,Arguments
+greet,"('Ali', 'Good morning')"
+greet,"('Sara', 'Hello there')"
+```
