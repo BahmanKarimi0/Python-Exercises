@@ -165,3 +165,40 @@ Function Name,Arguments
 greet,"('Ali', 'Good morning')"
 greet,"('Sara', 'Hello there')"
 ```
+---
+
+### Exercise 6: Retry on Failure Decorator (Intermediate)
+
+Write a decorator named `retry_on_failure` that:  
+1. Retries the function up to 3 times if it raises an exception, with a random delay between 0.5 and 1.5 seconds (using `time.sleep` and `random.uniform`).  
+2. Logs each failed attempt to a text file named "retry_logs.txt" (including function name, error, and attempt number).  
+3. Raises the last exception if all 3 attempts fail.  
+4. Use this decorator on a function named `divide` that takes two numbers and returns their division (and may raise a division-by-zero error).
+
+**File Name**: `06_retry_on_failure_decorator.py`
+
+**Sample Input**:  
+```python
+divide(10, 2)
+divide(5, 0)
+```
+**Sample Output**:
+
+- in the terminal:
+```
+5.0
+Traceback (most recent call last):
+  File "...", line ..., in <module>
+    divide(5, 0)
+  File "...", line ..., in wrapper
+    raise e
+ZeroDivisionError: division by zero
+```
+- In "retry_logs.txt":
+```
+Attempt 1 for divide failed: division by zero
+Attempt 2 for divide failed: division by zero
+Attempt 3 for divide failed: division by zero
+```
+
+---
