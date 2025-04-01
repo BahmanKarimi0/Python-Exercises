@@ -102,8 +102,6 @@ Function slow_sum took approximately 1.0 seconds
 
 ---
 
----
-
 ### Exercise 4: Cache Result Decorator (Simple)
 
 Write a decorator named `cache_result` that:  
@@ -133,8 +131,6 @@ multiply(2, 3)
 (2, 3):6
 (4, 5):20
 ```
-
----
 
 ---
 
@@ -201,4 +197,38 @@ Attempt 2 for divide failed: division by zero
 Attempt 3 for divide failed: division by zero
 ```
 
+---
+
+---
+
+### Exercise 7: Restrict Access Decorator (Intermediate)
+
+Write a decorator named `restrict_access` that:  
+1. Checks if a user (passed as the `user` argument) is allowed based on a JSON file named "users.json" (containing a list of dictionaries with "username" and "allowed" keys).  
+2. Prints an error message and skips the function if the user is not allowed.  
+3. Logs every access attempt (successful or not) to a text file named "access_logs.txt" (including function name, user, and result: "allowed" or "denied").  
+4. Use this decorator on a function named `get_secret` that prints a secret message.
+
+**File Name**: `07_restrict_access_decorator.py`
+
+**Sample Input**:  
+```python
+get_secret("admin")
+get_secret("guest")
+get_secret("unknown")
+```
+**Sample Output**:  
+
+- in the terminal:
+```
+Top secret message!
+Access denied: user 'guest' not allowed.
+Access denied: user 'unknown' not allowed.
+```
+- In "access_logs.txt":
+```
+get_secret: admin - allowed
+get_secret: guest - denied
+get_secret: unknown - denied
+```
 ---
