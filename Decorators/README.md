@@ -227,7 +227,10 @@ Access denied: user 'unknown' not allowed.
 ```
 - In "access_logs.txt":
 ```
----
+get_secret: admin - allowed
+get_secret: guest - denied
+get_secret: unknown - denied
+```
 ---
 
 ### Exercise 8: Rate Limit Decorator (Intermediate)
@@ -249,6 +252,7 @@ say_hi("Sara")
 say_hi("Reza")
 say_hi("Kasra")
 ```
+
 **Sample Output**:  
 
 - in the terminal:
