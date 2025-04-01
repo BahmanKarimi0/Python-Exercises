@@ -227,6 +227,47 @@ Access denied: user 'unknown' not allowed.
 ```
 - In "access_logs.txt":
 ```
+---
+---
+
+### Exercise 8: Rate Limit Decorator (Intermediate)
+
+Write a decorator named `rate_limit` that:  
+1. Limits the number of function calls to 3 within a 60-second window.  
+2. Stores call information (time and count) in a JSON file named "rate_limit.json" (with keys "function_name", "calls", and "last_reset").  
+3. Prints an error message and skips the function if the call limit is exceeded.  
+4. Use this decorator on a function named `say_hi` that prints a simple message.
+
+**Note**: The counter should reset every 60 seconds.
+
+**File Name**: `08_rate_limit_decorator.py`
+
+**Sample Input**:  
+```python
+say_hi("Ali")
+say_hi("Sara")
+say_hi("Reza")
+say_hi("Kasra")
+```
+**Sample Output**:  
+
+- in the terminal:
+```
+Hi Ali!
+Hi Sara!
+Hi Reza!
+Rate limit exceeded: maximum 3 calls per 60 seconds.
+```
+- In "rate_limit.json" (after execution):
+```json
+{
+    "function_name": "say_hi",
+    "calls": 3,
+    "last_reset": 43147.1112435
+}
+```
+---
+
 get_secret: admin - allowed
 get_secret: guest - denied
 get_secret: unknown - denied
