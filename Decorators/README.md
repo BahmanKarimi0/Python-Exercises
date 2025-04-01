@@ -305,8 +305,3 @@ slow_add,1.5XX,1712019602.0
 ```
 ---
 
-get_secret: admin - allowed
-get_secret: guest - denied
-get_secret: unknown - denied
-```
----
