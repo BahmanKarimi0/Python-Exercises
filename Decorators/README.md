@@ -271,6 +271,39 @@ Rate limit exceeded: maximum 3 calls per 60 seconds.
 }
 ```
 ---
+---
+
+### Exercise 9: Time Execution Decorator (Intermediate)
+
+Write a decorator named `time_execution` that:  
+1. Measures the execution time of a function (using `time.perf_counter`) and prints it in the terminal (format: "Execution time: X.XXX seconds").  
+2. Logs each execution time in a CSV file named "execution_times.csv" (columns: "Function Name", "Execution Time", "Timestamp").  
+3. Prints a warning if the execution time exceeds 1 second ("Warning: execution took longer than 1 second!").  
+4. Use this decorator on a function named `slow_add` that adds two numbers with an artificial 1.5-second delay (using `time.sleep`).
+
+**File Name**: `09_time_execution_decorator.py`
+
+**Sample Input**:  
+```python
+slow_add(5, 3)
+slow_add(2, 4)
+```
+**Sample Input**: 
+
+- in the terminal:
+```
+Execution time: 1.5XX seconds
+Warning: execution took longer than 1 second!
+Execution time: 1.5XX seconds
+Warning: execution took longer than 1 second!
+```
+- In "execution_times.csv":
+```csv
+Function Name,Execution Time,Timestamp
+slow_add,1.5XX,1712019600.0
+slow_add,1.5XX,1712019602.0
+```
+---
 
 get_secret: admin - allowed
 get_secret: guest - denied
