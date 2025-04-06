@@ -271,7 +271,6 @@ Rate limit exceeded: maximum 3 calls per 60 seconds.
 }
 ```
 ---
----
 
 ### Exercise 9: Time Execution Decorator (Intermediate)
 
@@ -304,4 +303,41 @@ slow_add,1.5XX,1712019600.0
 slow_add,1.5XX,1712019602.0
 ```
 ---
+
+### Exercise 10: Cache with Expiry Decorator (Intermediate)
+
+Write a decorator named `cache_with_expiry` that:  
+1. Caches the function result to avoid re-execution, with an expiry time of 30 seconds.  
+2. Stores cache data (inputs, outputs, and storage time) in a JSON file named "cache_data.json" (keys: "function_name", "args", "result", "timestamp").  
+3. Ignores the cache and re-executes the function if the expiry time has passed.  
+4. Use this decorator on a function named `multiply` that multiplies two numbers with an artificial 1-second delay (using `time.sleep`).
+
+**File Name**: `10_cache_with_expiry_decorator.py`
+
+**Sample Input**:  
+```python
+multiply(2, 3)
+multiply(2, 3)  // should use cache
+multiply(4, 5)
+```
+**Sample Output**: 
+
+- in the terminal:
+```
+Calculating: 2 * 3
+6
+From cache: 2 * 3
+6
+Calculating: 4 * 5
+20
+```
+- In "cache_data.json" (after execution):
+```json
+{
+    "cache": [
+        {"function_name": "multiply", "args": [2, 3], "result": 6, "timestamp": 1712019600.0},
+        {"function_name": "multiply", "args": [4, 5], "result": 20, "timestamp": 1712019601.0}
+    ]
+}
+```
 
