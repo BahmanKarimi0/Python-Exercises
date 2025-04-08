@@ -341,3 +341,49 @@ Calculating: 4 * 5
 }
 ```
 
+---
+
+### Exercise 11: Advanced Logger Decorator (Hard)
+
+Write a decorator named `advanced_logger` that:  
+1. Implements an advanced logging system with levels (INFO, WARNING, ERROR).  
+2. Logs messages to a text file named "app_logs.txt" in the format: `[level] [ISO timestamp] [function_name] message`.  
+3. Logs exceptions as ERROR and re-raises them.  
+4. Tracks the count of each log level in a JSON file named "log_stats.json" (keys: "INFO", "WARNING", "ERROR").  
+5. Use this decorator on a function named `divide_numbers` that divides two numbers and:  
+   - Logs a WARNING if the result exceeds 10.  
+   - Logs an ERROR if division by zero occurs.
+
+**File Name**: `11_advanced_logger_decorator.py`
+
+**Sample Input**:  
+```python
+divide_numbers(20, 2)  // result > 10, should log WARNING
+divide_numbers(5, 2)   // normal, should log INFO
+divide_numbers(10, 0)  // division by zero, should log ERROR
+```
+**Sample Output**:  
+
+- in the terminal:
+```
+Traceback (most recent call last):
+  File "...", line ..., in <module>
+    divide_numbers(10, 0)
+  File "...", line ..., in wrapper
+    raise e
+ZeroDivisionError: division by zero
+```
+- In "app_logs.txt":
+```
+[WARNING] 2025-04-07T12:00:00Z [divide_numbers] Result exceeds 10: 10.0
+[INFO] 2025-04-07T12:00:01Z [divide_numbers] Function executed successfully
+[ERROR] 2025-04-07T12:00:02Z [divide_numbers] division by zero
+```
+- In "log_stats.json":
+```json
+{
+    "INFO": 1,
+    "WARNING": 1,
+    "ERROR": 1
+}
+```
