@@ -387,3 +387,46 @@ ZeroDivisionError: division by zero
     "ERROR": 1
 }
 ```
+---
+
+### Exercise 12: Retry with Backoff Decorator (Hard)
+
+Write a decorator named `retry_with_backoff` that:  
+1. Retries a function up to 3 times if it raises an error.  
+2. Applies an exponential backoff delay between retries: 1s, 2s, 4s.  
+3. Logs all attempts to "retry_logs.txt" in the format: `[ISO timestamp] [function_name] message`.  
+4. Raises the last error if all attempts fail, logging "All attempts failed".  
+5. Tracks success and failure counts in "retry_stats.json" (keys: "success", "failure").  
+6. Use this decorator on a function named `unstable_operation` that:  
+   - Generates a random number (0-1) and raises ValueError if < 0.7.
+
+**File Name**: `12_retry_with_backoff_decorator.py`
+
+**Sample Input**:  
+```python
+unstable_operation()
+```
+**Sample Output**: 
+
+- in the terminal:
+```
+Traceback (most recent call last):
+  File "...", line ..., in <module>
+    unstable_operation()
+  File "...", line ..., in wrapper
+    raise last_error
+ValueError: Operation failed
+```
+- In "retry_logs.txt":
+```
+[2025-04-07T12:00:00Z] [unstable_operation] Attempt 1 failed with error: Operation failed - Retrying in 1 seconds
+[2025-04-07T12:00:01Z] [unstable_operation] Attempt 2 failed with error: Operation failed - Retrying in 2 seconds
+[2025-04-07T12:00:03Z] [unstable_operation] Attempt 3 failed with error: Operation failed - All attempts failed
+```
+- In "retry_stats.json":
+```json
+{
+    "success": 0,
+    "failure": 1
+}
+```
