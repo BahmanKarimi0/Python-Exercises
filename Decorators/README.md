@@ -430,3 +430,48 @@ ValueError: Operation failed
     "failure": 1
 }
 ```
+---
+
+### Exercise 13: Restrict Access Decorator (Hard)
+
+Write a decorator named `restrict_access` that:  
+1. Restricts function access based on user role ("admin", "editor", "viewer").  
+2. Allows only specified roles, raising `PermissionError` for others ("Access denied: insufficient permissions").  
+3. Logs access attempts to "access_logs.txt" in the format: `[ISO timestamp] [function_name] [role] Access [granted|denied]`.  
+4. Tracks granted/denied counts per role in "access_stats.json" (keys: roles, subkeys: "granted", "denied").  
+5. Use this decorator on a function named `modify_data` that:  
+   - Is allowed only for "admin" role.  
+   - Prints "Data modified successfully".
+
+**File Name**: `13_restrict_access_decorator.py`
+
+**Sample Input**:  
+```python
+for role in ["admin", "editor", "viewer"]:
+    try:
+        modify_data(role)
+    except PermissionError as e:
+        print(f"Error for {role}: {e}")
+```
+**Sample Input**:
+
+- in the terminal:
+```
+Data modified successfully
+Error for editor: Access denied: insufficient permissions
+Error for viewer: Access denied: insufficient permissions
+```
+- In "access_logs.txt":
+```
+[2025-04-07T12:00:00Z] [modify_data] [admin] Access granted
+[2025-04-07T12:00:01Z] [modify_data] [editor] Access denied
+[2025-04-07T12:00:02Z] [modify_data] [viewer] Access denied
+```
+- In "access_stats.json":
+```json
+{
+    "admin": {"granted": 1, "denied": 0},
+    "editor": {"granted": 0, "denied": 1},
+    "viewer": {"granted": 0, "denied": 1}
+}
+```
