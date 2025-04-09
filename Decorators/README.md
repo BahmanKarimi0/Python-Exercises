@@ -475,3 +475,55 @@ Error for viewer: Access denied: insufficient permissions
     "viewer": {"granted": 0, "denied": 1}
 }
 ```
+---
+
+### Exercise 14: Rate Limiter Decorator (Hard)
+
+Write a decorator named `rate_limiter` that:  
+1. Limits the number of function calls within a time window (e.g., 60 seconds).  
+2. Takes a call limit (e.g., 5) as an argument and raises `RuntimeError` ("Rate limit exceeded") if exceeded.  
+3. Logs attempts to "rate_limit_logs.txt" in the format: `[ISO timestamp] [function_name] Call #X within window - [allowed|blocked]`.  
+4. Tracks allowed/blocked counts in "rate_limit_stats.json" (keys: "allowed", "blocked").  
+5. Use this decorator on a function named `fetch_data` that:  
+   - Prints "Data fetched successfully".  
+   - Has a limit of 5 calls in 60 seconds.
+
+**File Name**: `14_rate_limiter_decorator.py`
+
+**Sample Input**:  
+```python
+for _ in range(7):
+    try:
+        fetch_data()
+    except RuntimeError as e:
+        print(f"Error: {e}")
+```
+**Sample Output**:  
+
+- In the terminal:
+```
+Data fetched successfully
+Data fetched successfully
+Data fetched successfully
+Data fetched successfully
+Data fetched successfully
+Error: Rate limit exceeded
+Error: Rate limit exceeded
+```
+- In "rate_limit_logs.txt":
+```
+[2025-04-07T12:00:00Z] [fetch_data] Call #1 within window - allowed
+[2025-04-07T12:00:01Z] [fetch_data] Call #2 within window - allowed
+[2025-04-07T12:00:02Z] [fetch_data] Call #3 within window - allowed
+[2025-04-07T12:00:03Z] [fetch_data] Call #4 within window - allowed
+[2025-04-07T12:00:04Z] [fetch_data] Call #5 within window - allowed
+[2025-04-07T12:00:05Z] [fetch_data] Call #6 within window - blocked
+[2025-04-07T12:00:06Z] [fetch_data] Call #7 within window - blocked
+```
+- In "rate_limit_stats.json":
+```json
+{
+    "allowed": 5,
+    "blocked": 2
+}
+```
