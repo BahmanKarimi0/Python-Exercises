@@ -52,3 +52,27 @@ for _ in range(6):
 8
 10
 ```
+---
+
+### Exercise 3: Squares Generator (Easy)
+
+Write a generator named `squares` that:  
+1. Starts from 1 and generates the squares of natural numbers indefinitely (e.g., 1, 4, 9, 16, ...).  
+2. Prints the first 5 values to test it.
+
+**File Name**: `03_squares_generator.py`
+
+**Sample Input**:  
+```python
+squares_gen = squares()
+for _ in range(5):
+    print(next(squares_gen))
+```
+**Sample Output**: 
+```
+1
+4
+9
+16
+25
+```
