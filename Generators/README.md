@@ -76,3 +76,29 @@ for _ in range(5):
 16
 25
 ```
+---
+
+### Exercise 4: Fibonacci Generator (Easy)
+
+Write a generator named `fibonacci` that:  
+1. Generates the Fibonacci sequence indefinitely (e.g., 0, 1, 1, 2, 3, 5, 8, ...).  
+2. Prints the first 7 values to test it.
+
+**File Name**: `04_fibonacci_generator.py`
+
+**Sample Input**:  
+```python
+fib = fibonacci()
+for _ in range(7):
+    print(next(fib))
+```
+**Sample Output**:
+```
+0
+1
+1
+2
+3
+5
+8
+```
