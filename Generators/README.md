@@ -102,3 +102,28 @@ for _ in range(7):
 5
 8
 ```
+---
+
+### Exercise 5: Powers of Two Generator (Easy)
+
+Write a generator named `powers_of_two` that:  
+1. Starts from 1 and generates powers of 2 indefinitely (e.g., 1, 2, 4, 8, 16, ...).  
+2. Prints the first 6 values to test it.
+
+**File Name**: `05_powers_of_two_generator.py`
+
+**Sample Input**:  
+```python
+powers = powers_of_two()
+for _ in range(6):
+    print(next(powers))
+```
+**Sample Output**:
+```
+1
+2
+4
+8
+16
+32
+```
