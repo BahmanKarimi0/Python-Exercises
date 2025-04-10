@@ -527,3 +527,36 @@ Error: Rate limit exceeded
     "blocked": 2
 }
 ```
+---
+
+### Exercise 15: Retry on Failure Decorator (Hard)
+
+Write a decorator named `retry_on_failure` that:  
+1. Retries a function on any exception up to a specified number of times (e.g., 3).  
+2. Takes two arguments: `max_retries` (max attempts) and `delay` (seconds between retries).  
+3. Raises the last exception if all retries fail.  
+4. Logs each attempt to "retry_logs.txt" in the format: `[ISO timestamp] [function_name] Attempt #X - [success|failure: ExceptionType: message]`.  
+5. Use this decorator on a function named `unreliable_operation` that:  
+   - Generates a random number (0-9).  
+   - Raises `ValueError` ("Operation failed") if the number > 4, otherwise prints "Operation succeeded" and returns the number.  
+
+**File Name**: `15_retry_on_failure_decorator.py`
+
+**Sample Input**:  
+```python
+try:
+    unreliable_operation()
+except ValueError as e:
+    print(f"Final error after retries: {e}")
+```
+**Sample Output**: 
+
+- In the terminal:
+```
+Operation succeeded
+```
+- In "retry_logs.txt":
+```
+[2025-04-07T12:00:00Z] [unreliable_operation] Attempt #1 - failure: ValueError: Operation failed
+[2025-04-07T12:00:02Z] [unreliable_operation] Attempt #2 - success
+```
