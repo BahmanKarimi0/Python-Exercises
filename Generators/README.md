@@ -27,3 +27,28 @@ for _ in range(5):
 8
 9
 ```
+---
+
+### Exercise 2: Even Numbers Generator (Easy)
+
+Write a generator named `even_numbers` that:  
+1. Starts from 0 and generates even numbers indefinitely (e.g., 0, 2, 4, 6, ...).  
+2. Prints the first 6 values to test it.
+
+**File Name**: `02_even_numbers_generator.py`
+
+**Sample Input**:  
+```python
+evens = even_numbers()
+for _ in range(6):
+    print(next(evens))
+```
+**Sample Output**:
+```
+0
+2
+4
+6
+8
+10
+```
