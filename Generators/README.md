@@ -180,3 +180,30 @@ for _ in range(10):
 3
 1
 ```
+---
+
+### Exercise 8: Filter Odds Generator (Medium)
+
+Write a generator named `filter_odds` that:  
+1. Takes another generator as an argument (e.g., one producing natural numbers).  
+2. Filters out odd numbers and yields only even numbers.  
+3. For testing, create a generator `natural_numbers` that produces natural numbers starting from 1 (1, 2, 3, 4, ...).  
+4. Use `filter_odds` with `natural_numbers()` and print the first 5 values.
+
+**File Name**: `08_filter_odds_generator.py`
+
+**Sample Input**:  
+```python
+naturals = natural_numbers()
+evens = filter_odds(naturals)
+for _ in range(5):
+    print(next(evens))
+```
+**Sample Output**:
+```
+2
+4
+6
+8
+10
+```
