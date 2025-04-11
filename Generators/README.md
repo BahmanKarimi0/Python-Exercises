@@ -150,3 +150,33 @@ for num in limited_range(2, 10, 3):
 5
 8
 ```
+---
+
+### Exercise 7: Cycle List Generator (Medium)
+
+Write a generator named `cycle_list` that:  
+1. Takes a list as an argument (e.g., `[1, 2, 3]`) and cycles through its elements indefinitely.  
+2. Repeats the list from the beginning when it reaches the end (e.g., 1, 2, 3, 1, 2, 3, ...).  
+3. Test it with the list `[1, 2, 3]` and print the first 10 values.
+
+**File Name**: `07_cycle_list_generator.py`
+
+**Sample Input**:  
+```python
+cycler = cycle_list([1, 2, 3])
+for _ in range(10):
+    print(next(cycler))
+```
+**Sample Output**:  
+```
+1
+2
+3
+1
+2
+3
+1
+2
+3
+1
+```
