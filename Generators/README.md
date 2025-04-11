@@ -127,3 +127,26 @@ for _ in range(6):
 16
 32
 ```
+---
+
+### Exercise 6: Limited Range Generator (Medium)
+
+Write a generator named `limited_range` that:  
+1. Takes three arguments: `start` (beginning), `stop` (end), and `step` (increment).  
+2. Generates a sequence from `start` up to (but not including) `stop` with the given `step`.  
+3. Stops when it reaches or exceeds `stop`.  
+4. Test it with `start=2`, `stop=10`, `step=3` and print all values.
+
+**File Name**: `06_limited_range_generator.py`
+
+**Sample Input**:  
+```python
+for num in limited_range(2, 10, 3):
+    print(num)
+```
+**Sample Output**: 
+```
+2
+5
+8
+```
