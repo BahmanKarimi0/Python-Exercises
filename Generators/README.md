@@ -258,3 +258,29 @@ for _ in range(6):
 15
 21
 ```
+---
+
+### Exercise 11: Flatten Nested Generator (Hard)
+
+Write a generator named `flatten_nested` that:  
+1. Takes a nested list as an argument (e.g., `[1, [2, [3, 4], 5], [6]]`), which may contain numbers and nested lists of any depth.  
+2. Yields all numbers in a flat sequence, in their order of appearance.  
+3. Assumes non-list elements are numbers.  
+4. Test it with the list `[1, [2, [3, 4], 5], [6]]` and print all values.
+
+**File Name**: `11_flatten_nested_generator.py`
+
+**Sample Input**:  
+```python
+for num in flatten_nested([1, [2, [3, 4], 5], [6]]):
+    print(num)
+```
+**Sample Output**:
+```
+1
+2
+3
+4
+5
+6
+```
