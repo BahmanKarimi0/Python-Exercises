@@ -230,3 +230,31 @@ for num in unique_values([1, 2, 2, 3, 3, 4, 1]):
 3
 4
 ```
+---
+
+### Exercise 10: Running Sum Generator (Medium)
+
+Write a generator named `running_sum` that:  
+1. Takes another generator as an argument (e.g., one producing numbers).  
+2. Yields the running sum of the values produced by the input generator.  
+3. For testing, create a generator `count_up` that produces natural numbers starting from 1 (1, 2, 3, 4, ...).  
+4. Use `running_sum` with `count_up()` and print the first 6 values.
+
+**File Name**: `10_running_sum_generator.py`
+
+**Sample Input**:  
+```python
+counter = count_up()
+sums = running_sum(counter)
+for _ in range(6):
+    print(next(sums))
+```
+**Sample Output**:
+```
+1
+3
+6
+10
+15
+21
+```
