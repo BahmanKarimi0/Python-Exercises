@@ -207,3 +207,26 @@ for _ in range(5):
 8
 10
 ```
+---
+
+### Exercise 9: Unique Values Generator (Medium)
+
+Write a generator named `unique_values` that:  
+1. Takes a list as an argument (e.g., `[1, 2, 2, 3, 3, 4, 1]`) and yields only unique values in their order of appearance.  
+2. Skips duplicates, yielding each value only the first time it appears.  
+3. Test it with the list `[1, 2, 2, 3, 3, 4, 1]` and print all values.
+
+**File Name**: `09_unique_values_generator.py`
+
+**Sample Input**:  
+```python
+for num in unique_values([1, 2, 2, 3, 3, 4, 1]):
+    print(num)
+```
+**Sample Output**:
+```
+1
+2
+3
+4
+```
