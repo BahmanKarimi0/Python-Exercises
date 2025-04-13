@@ -309,3 +309,43 @@ for _ in range(6):
 11
 13
 ```
+---
+### Exercise 13: File Lines Generator (Hard)
+
+Write a generator named `file_lines` that:  
+1. Takes a text file name (e.g., `data.txt`) and a keyword as arguments.  
+2. Yields lines from the file one by one, but only those containing the keyword.  
+3. The search must be case-insensitive.  
+4. If the file is not found, the generator should yield `"File not found"` once and then stop.  
+5. For testing, assume `data.txt` has the following content:
+**data.txt**:
+```
+Hello world
+This is a Test
+Python programming
+Another test line
+```
+Test it with the keyword `test` and print all matching lines.
+
+**File Name**: `13_file_lines_generator.py`
+
+**Sample Input**:  
+```python
+for line in file_lines("data.txt", "test"):
+ print(line.strip())
+```
+**Sample Output**: 
+```
+This is a Test
+Another test line
+```
+**If the file does not exist**:
+```python
+for line in file_lines("notfound.txt", "test"):
+    print(line.strip())
+```
+**Sample Output**: 
+```
+File not found
+```
+---
