@@ -349,3 +349,47 @@ for line in file_lines("notfound.txt", "test"):
 File not found
 ```
 ---
+### Exercise 14: Chained Generators (Hard)
+
+Write a generator named `chained_generators` that:  
+1. Takes a list of generators as an argument (e.g., `[gen1, gen2, gen3]`).  
+2. Yields all values produced by these generators one by one, in order: all values from the first generator, then the second, and so on.  
+3. Skips any empty generators (those producing no values) and moves to the next.  
+4. For testing, create three sample generators:  
+   - `count_up`: Produces numbers from 1 to 3 (i.e., 1, 2, 3).  
+   - `squares`: Produces squares of numbers 1 and 2 (i.e., 1, 4).  
+   - `evens`: Produces even numbers from 2 to 6 (i.e., 2, 4, 6).  
+   Print all values produced by `chained_generators` with these generators.
+
+**File Name**: `14_chained_generators.py`
+
+**Sample Input**:  
+```python
+def count_up():
+    for i in range(1, 4):
+        yield i
+
+def squares():
+    for i in range(1, 3):
+        yield i * i
+
+def evens():
+    for i in range(2, 7, 2):
+        yield i
+
+generators = [count_up(), squares(), evens()]
+for value in chained_generators(generators):
+    print(value)
+```
+**Sample Output**:  
+```
+1
+2
+3
+1
+4
+2
+4
+6
+```
+---
