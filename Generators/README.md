@@ -284,3 +284,28 @@ for num in flatten_nested([1, [2, [3, 4], 5], [6]]):
 5
 6
 ```
+---
+### Exercise 12: Prime Numbers Generator (Hard)
+
+Write a generator named `prime_numbers` that:  
+1. Generates prime numbers indefinitely (e.g., 2, 3, 5, 7, 11, ...).  
+2. Uses an efficient method to check for primality, such as testing divisibility only up to the square root of the number and skipping even numbers after 2.  
+3. Prints the first 6 values to test it.
+
+**File Name**: `12_prime_numbers_generator.py`
+
+**Sample Input**:  
+```python
+primes = prime_numbers()
+for _ in range(6):
+    print(next(primes))
+```
+**Sample Output**:
+```
+2
+3
+5
+7
+11
+13
+```
