@@ -393,3 +393,39 @@ for value in chained_generators(generators):
 6
 ```
 ---
+### Exercise 15: Infinite Filter Generator (Hard)
+
+Write a generator named `infinite_filter` that:  
+1. Takes an input generator (e.g., one producing numbers) and a predicate function as arguments.  
+2. Yields only the values from the input generator for which the predicate function returns `True`.  
+3. The generator should work indefinitely (as long as the input generator produces values).  
+4. For testing, create a sample generator named `natural_numbers` that produces natural numbers starting from 1 (1, 2, 3, ...).  
+5. Create a predicate function named `is_multiple_of_3` that checks if a number is divisible by 3.  
+6. Using `infinite_filter` with these, print the first 5 numbers that are multiples of 3.
+
+**File Name**: `15_infinite_filter_generator.py`
+
+**Sample Input**:  
+```python
+def natural_numbers():
+    n = 1
+    while True:
+        yield n
+        n += 1
+
+def is_multiple_of_3(n):
+    return n % 3 == 0
+
+filtered = infinite_filter(natural_numbers(), is_multiple_of_3)
+for _ in range(5):
+    print(next(filtered))
+```
+**Sample Output**:
+```
+3
+6
+9
+12
+15
+```
+---
