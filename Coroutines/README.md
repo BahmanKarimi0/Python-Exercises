@@ -48,9 +48,9 @@ c.send("date")
 ```
 **Sample Output**:
 ```
-```
 Received string #1: apple
 Received string #2: banana
 Received string #3: cherry
 Received string #4: date
 ```
+---
