@@ -103,3 +103,27 @@ test
 100
 3.14
 ```
+---
+### Exercise 5: Logger Coroutine (Simple)
+
+Write a coroutine named `logger` that:  
+1. Indefinitely receives strings from outside using `yield`.  
+2. Adds each received string to an internal list and prints the current count of stored strings (e.g., `"Logged string, total: N"`, where `N` is the count).  
+3. For testing, start the coroutine and send 3 arbitrary strings (e.g., `"error"`, `"warning"`, `"info"`).
+
+**File Name**: `05_logger_coroutine.py`
+
+**Sample Input**:  
+```python
+l = logger()
+next(l)  # Start the coroutine
+l.send("error")
+l.send("warning")
+l.send("info")
+```
+**Sample Input**:
+```
+Logged string, total: 1
+Logged string, total: 2
+Logged string, total: 3
+```
