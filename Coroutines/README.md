@@ -80,3 +80,26 @@ Current sum: 60.5
 Current sum: 101.25
 ```
 ---
+### Exercise 4: Echo Coroutine (Simple)
+
+Write a coroutine named `echo` that:  
+1. Indefinitely receives values (e.g., strings or numbers) from outside using `yield`.  
+2. Yields back each received value as output (i.e., returns the same value).  
+3. For testing, start the coroutine and send 3 arbitrary values (e.g., `"test"`, `100`, `3.14`) and print the returned values.
+
+**File Name**: `04_echo_coroutine.py`
+
+**Sample Input**:  
+```python
+e = echo()
+next(e)  # Start the coroutine
+print(e.send("test"))
+print(e.send(100))
+print(e.send(3.14))
+```
+**Sample Output**:
+```
+test
+100
+3.14
+```
