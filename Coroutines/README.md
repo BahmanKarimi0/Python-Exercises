@@ -54,3 +54,29 @@ Received string #3: cherry
 Received string #4: date
 ```
 ---
+### Exercise 3: Accumulator Coroutine (Simple)
+
+Write a coroutine named `accumulator` that:  
+1. Indefinitely receives numbers (e.g., integers or floats) from outside using `yield`.  
+2. Keeps track of the sum of numbers received and prints the current sum each time (e.g., `"Current sum: sum"`).  
+3. For testing, start the coroutine and send 4 arbitrary numbers (e.g., `10`, `20.5`, `30`, `40.75`).
+
+**File Name**: `03_accumulator_coroutine.py`
+
+**Sample Input**:  
+```python
+a = accumulator()
+next(a)  # Start the coroutine
+a.send(10)
+a.send(20.5)
+a.send(30)
+a.send(40.75)
+```
+**Sample Output**:
+```
+Current sum: 10
+Current sum: 30.5
+Current sum: 60.5
+Current sum: 101.25
+```
+---
