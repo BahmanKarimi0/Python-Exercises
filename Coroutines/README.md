@@ -127,3 +127,42 @@ Logged string, total: 1
 Logged string, total: 2
 Logged string, total: 3
 ```
+---
+### Exercise 6: File Logger Coroutine (Medium)
+
+Write a coroutine named `file_logger` that:  
+1. Takes a file path (e.g., `"logs.txt"`) and indefinitely receives dictionaries from outside using `yield`. Each dictionary contains `"message"` (string) and `"level"` (string, e.g., `"INFO"`, `"ERROR"`).  
+2. Saves each dictionary as a line in the text file (e.g., `level|message`).  
+3. Keeps an internal list of all received `"level"` values and, if the string `"count"` is sent, yields a dictionary with the count of each `"level"` (e.g., `{"INFO": 2, "ERROR": 1}`).  
+4. For testing:  
+   - Create a separate generator producing 3 sample dictionaries (e.g., `{"message": "System started", "level": "INFO"}`, ...).  
+   - Start the coroutine, send dictionaries from the generator, then send `"count"` and print the result.
+
+**File Name**: `06_file_logger_coroutine.py**
+
+**Sample Input**:  
+```python
+def sample_logs():
+    yield {"message": "System started", "level": "INFO"}
+    yield {"message": "Failed to connect", "level": "ERROR"}
+    yield {"message": "User logged in", "level": "INFO"}
+
+l = file_logger("logs.txt")
+next(l)  # Start the coroutine
+for log in sample_logs():
+    l.send(log)
+print(l.send("count"))
+```
+**Sample Output**:
+
+- In the teminal:
+```
+{'INFO': 2, 'ERROR': 1}
+```
+- In logs.txt:
+```
+INFO|System started
+ERROR|Failed to connect
+INFO|User logged in
+```
+---
