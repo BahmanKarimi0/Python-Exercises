@@ -166,3 +166,41 @@ ERROR|Failed to connect
 INFO|User logged in
 ```
 ---
+### Exercise 7: Key-Value Logger Coroutine (Medium)
+
+Write a coroutine named `keyval_logger` that:  
+1. Takes a text file path (e.g., `"keyval.txt"`) and indefinitely receives dictionaries from outside using `yield`. Each dictionary contains `"key"` (string) and `"value"` (number).  
+2. Saves each dictionary as a line in the text file, formatted as `key=value` (e.g., `user1=100`).  
+3. Keeps an internal dictionary of keys and values and, if the string `"total"` is sent, yields the sum of all values.  
+4. For testing:  
+   - Create a separate generator producing 3 sample dictionaries (e.g., `{"key": "user1", "value": 100}`, ...).  
+   - Start the coroutine, send dictionaries from the generator, then send `"total"` and print the result.
+
+**File Name**: `07_keyval_logger_coroutine.py`
+
+**Sample Input**:  
+```python
+def sample_dicts():
+    yield {"key": "user1", "value": 100}
+    yield {"key": "user2", "value": 200}
+    yield {"key": "user3", "value": 300}
+
+k = keyval_logger("keyval.txt")
+next(k)  # Start the coroutine
+for d in sample_dicts():
+    k.send(d)
+print(k.send("total"))
+```
+**Sample Input**: 
+
+- In the terminal:
+```
+600
+```
+- In the keyval.txt:
+```
+user1=100
+user2=200
+user3=300
+```
+---
