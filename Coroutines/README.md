@@ -241,4 +241,44 @@ print(a.send("average"))
 3 
 4,5 
 ```
-----
+---
+### Exercise 9: Tuple Filter Coroutine (Medium)
+
+Write a coroutine named `tuple_filter` that:  
+1. Takes a text file path (e.g., `"filtered.txt"`) and a threshold number (e.g., `threshold`, float) and indefinitely receives 2-tuples (containing a string and a number) from outside using `yield`.  
+2. If the number in the tuple is greater than or equal to the threshold, saves the tuple as a line in the text file, formatted as `string:number` (e.g., `item1:10.5`).  
+3. Keeps an internal list of strings from saved tuples and, if the string `"count"` is sent, yields the number of saved tuples.  
+4. For testing:  
+   - Create a separate generator producing 4 sample tuples (e.g., `("item1", 10.5)`, ...).  
+   - Start the coroutine, send tuples from the generator, then send `"count"` and print the result.
+
+**File Name**: `09_tuple_filter_coroutine.py`
+
+**Sample Input**:  
+```python
+def sample_tuples():
+    yield ("item1", 10.5)
+    yield ("item2", 5.0)
+    yield ("item3", 15.0)
+    yield ("item4", 7.5)
+
+f = tuple_filter("filtered.txt", 8.0)
+next(f)  # Start the coroutine
+for tup in sample_tuples():
+    f.send(tup)
+print(f.send("count"))
+```
+**Sample Output**:
+
+- In the terminal:
+```
+Invalid tuple
+Invalid tuple
+2
+```
+- In 'filtered.txt':
+```
+item1:10.5
+item3:15.0
+```
+---
