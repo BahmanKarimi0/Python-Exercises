@@ -204,3 +204,41 @@ user2=200
 user3=300
 ```
 ---
+### Exercise 8: List Accumulator Coroutine (Medium)
+
+Write a coroutine named `list_accumulator` that:  
+1. Takes a text file path (e.g., `"accum.txt"`) and indefinitely receives lists of numbers from outside using `yield`.  
+2. Saves each list as a line in the text file, formatted as a comma-separated string (e.g., `1,2,3`).  
+3. Keeps an internal list of all received numbers and, if the string `"average"` is sent, yields the average of the numbers.  
+4. For testing:  
+   - Create a separate generator producing 3 sample lists (e.g., `[1, 2]`, `[3]`, `[4, 5]`).  
+   - Start the coroutine, send lists from the generator, then send `"average"` and print the result.
+
+**File Name**: `08_list_accumulator_coroutine.py`
+
+**Sample Input**:  
+```python
+def sample_lists():
+    yield [1, 2]
+    yield [3]
+    yield [4, 5]
+
+a = list_accumulator("accum.txt")
+next(a)  # Start the coroutine
+for lst in sample_lists():
+    a.send(lst)
+print(a.send("average"))
+```
+**Sample Output**: 
+
+- In the terminal:
+```
+3.0
+```
+- In accum.txt:
+```
+1,2 
+3 
+4,5 
+```
+----
