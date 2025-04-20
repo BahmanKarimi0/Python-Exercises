@@ -282,3 +282,41 @@ item1:10.5
 item3:15.0
 ```
 ---
+### Exercise 10: JSON Processor Coroutine (Medium)
+
+Write a coroutine named `json_processor` that:  
+1. Takes a text file path (e.g., `"processed.txt"`) and indefinitely receives dictionaries from outside using `yield`. Each dictionary must contain `"id"` (string) and `"data"` (list of numbers).  
+2. Saves each dictionary as a line in the text file, formatted as `id:data_sum` (e.g., `record1:15.5`), where `data_sum` is the sum of numbers in `"data"`.  
+3. Keeps an internal dictionary mapping each `"id"` to the maximum `data_sum` and, if the string `"max"` is sent, yields the internal dictionary.  
+4. For testing:  
+   - Create a separate generator producing 3 sample dictionaries (e.g., `{"id": "record1", "data": [1, 2, 3]}`, ...).  
+   - Start the coroutine, send dictionaries from the generator, then send `"max"` and print the result.
+
+**File Name**: `10_json_processor_coroutine.py`
+
+**Sample Input**:  
+```python
+def sample_dicts():
+    yield {"id": "record1", "data": [1, 2, 3]}
+    yield {"id": "record2", "data": [4, 5]}
+    yield {"id": "record1", "data": [10]}
+
+p = json_processor("processed.txt")
+next(p)  # Start the coroutine
+for d in sample_dicts():
+    p.send(d)
+print(p.send("max"))
+```
+**Sample Output**:
+
+- In the terminal:
+```
+{'record1': 10, 'record2': 9}
+```
+- In 'processed.txt':
+```
+record1:6
+record2:9
+record1:10
+```
+---
