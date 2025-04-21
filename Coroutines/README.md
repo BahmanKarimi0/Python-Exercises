@@ -320,3 +320,55 @@ record2:9
 record1:10
 ```
 ---
+### Exercise 11: Log Processor Coroutine Pipeline (Hard)
+
+Write a coroutine pipeline with three coroutines: `log_reader`, `log_filter`, and `log_writer` to process an input text file (log) and save filtered results to an output text file.  
+- **Input File Structure**: Each line is a JSON dictionary with `"event"` (string), `"level"` (string, e.g., `"INFO"`, `"ERROR"`), and `"value"` (number) (e.g., `{"event": "login", "level": "INFO", "value": 100.0}`).  
+- **Coroutines**:  
+  1. **log_reader**: Takes a text file path (e.g., `"logs.txt"`), reads it line by line, parses each line to a dictionary using `json.loads`, and yields dictionaries.  
+  2. **log_filter**: Takes a target level (e.g., `"ERROR"`), filters dictionaries where `"level"` matches the target, and yields them.  
+  3. **log_writer**: Takes a text file path (e.g., `"errors.txt"`), saves dictionaries as `event:value` lines (e.g., `login:100.0`), tracks the count of saved dictionaries, and yields the count if `"count"` is sent.  
+- **Testing**:  
+  - Assume a text file with 4 lines.  
+  - Connect coroutines as a pipeline (`log_reader` → `log_filter` → `log_writer`).  
+  - Send `"count"` and print the result.
+
+**File Name**: `11_log_processor_coroutine.py`
+
+**Sample Input (`logs.txt`)**:
+```
+{"event": "login", "level": "INFO", "value": 100.0}
+{"event": "crash", "level": "ERROR", "value": 50.0}
+{"event": "logout", "level": "INFO", "value": 75.0}
+{"event": "timeout", "level": "ERROR", "value": 25.0}
+```
+
+**Sample Code**:  
+```python
+r = log_reader("logs.txt")
+f = log_filter("ERROR")
+w = log_writer("errors.txt")
+next(w)  # Start log_writer
+next(f)  # Start log_filter
+next(r)  # Start log_reader
+for item in r:
+    filtered_item = f.send(item)
+    if filtered_item:
+        w.send(filtered_item)
+print(w.send("count"))
+```
+**Sample Output:**:
+
+- In the terminalL
+```
+log_reader coroutine closed
+2
+log_filter coroutine closed
+log_writer coroutine closed
+```
+- In 'errors.txt':
+```
+crash:50.0
+timeout:25.0
+```
+---
