@@ -372,3 +372,66 @@ crash:50.0
 timeout:25.0
 ```
 ---
+### Exercise 12: Multi-Stage Coroutine Analyzer (Hard)
+
+Write a coroutine pipeline with four coroutines: `source`, `validator`, `analyzer`, and `recorder` to process an input text file (JSON dictionaries) and save analyzed results to a CSV file.  
+- **Input File Structure**: Each line is a JSON dictionary with `"id"` (string), `"type"` (string, e.g., `"sale"`, `"refund"`), and `"amount"` (number) (e.g., `{"id": "tx1", "type": "sale", "amount": 200.0}`).  
+- **Coroutines**:  
+  1. **source**: Takes a text file path (e.g., `"transactions.txt"`), reads it line by line, parses each line to a dictionary using `json.loads`, and yields dictionaries.  
+  2. **validator**: Validates dictionaries for correct keys (`"id"`, `"type"`, `"amount"`) and types, yielding valid ones.  
+  3. **analyzer**: Takes a target type (e.g., `"sale"`), filters dictionaries by type, tracks total amount and count per `"id"`, and yields filtered dictionaries. Yields stats dictionary if `"stats"` is sent.  
+  4. **recorder**: Takes a CSV file path (e.g., `"sales.csv"`), saves dictionaries as `id,amount` rows, and for `"stats"`, saves `id,total_amount,count` rows, yielding total rows written.  
+- **Testing**:  
+  - Assume a text file with 5 lines.  
+  - Connect coroutines as a pipeline (`source` → `validator` → `analyzer` → `recorder`).  
+  - Send `"stats"` and print the result.
+
+**File Name**: `12_multi_stage_coroutine.py`
+
+**Sample Input (`transactions.txt`)**:  
+```
+{"id": "tx1", "type": "sale", "amount": 200.0}
+{"id": "tx2", "type": "refund", "amount": 50.0}
+{"id": "tx1", "type": "sale", "amount": 100.0}
+{"id": "tx3", "type": "sale", "amount": 150.0}
+```
+
+**Sample Code**:  
+```python
+s = source("transactions.txt")
+v = validator()
+a = analyzer("sale")
+r = recorder("sales.csv")
+
+next(r)
+next(a)
+next(v)
+for item in s:
+    valid_item = v.send(item)
+    if valid_item is not None:
+        analyzed_item = a.send(valid_item)
+        if analyzed_item is not None:
+            r.send(analyzed_item)
+            next(r)
+print(r.send("stats"))
+```
+**Sample Output**:
+
+- In the terminal:
+```
+3
+validator coroutine closed
+analyzer coroutine closed
+recorder coroutine closed
+```
+- In 'sales.csv':
+```csv
+id,amount
+tx1,200.0
+tx1,100.0
+tx3,150.0
+id,total,count
+tx1,300.0,2
+tx3,150.0,1
+```
+---
